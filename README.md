@@ -25,7 +25,7 @@ Installation
 3. Type `Moodle Completions` into the search box and select the package to
 install it
 
-### [Git](http://git-scm.com)
+### [Git](https://github.com/daletsin/MoodleCompletions)
 
 Clone directly into your Sublime Text `Packages` directory.  *Locate your
 `Packages` directory by using the menu item
@@ -33,7 +33,7 @@ Clone directly into your Sublime Text `Packages` directory.  *Locate your
 
 ### [Manual](http://www.sublimetext.com/docs/3/packages.html)
 
-1. [Download a release](https://github.com/gerardroche/sublime-phpck/releases)
+1. [Download a release](https://github.com/daletsin/MoodleCompletions)
 2. Unzip and copy it to your Sublime Text `Packages` directory.  *Locate your
 `Packages` directory by using the menu item
 `Preferences -> Browse Packages...`.*
