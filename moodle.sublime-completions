@@ -1,6 +1,7 @@
 {
     "scope": "source.php",
-    "completions": [{
+    "completions": [
+    {
         "trigger": "capabilities\tMoodle",
         "contents": "\\$capabilities = array('${1:mod}/${2:MYPLUGIN}:${3:MYCAPABILITY}' => array('riskbitmask' => RISK_SPAM, 'captype' => 'write', 'contextlevel' =>CONTEXT_MODULE, 'archetypes' => array('editingteacher' => CAP_ALLOW)))"
     }, {
@@ -26,136 +27,136 @@
         "contents": "get_context_instance(${1:\\$contextlevel}, ${2:\\$instance = 0}, ${3:\\$strictness = IGNORE_MISSING})"
     }, {
         "trigger": "get_context_instance_by_id\tMoodle",
-        "contents": "get_context_instance_by_id(\\$id, \\$strictness = IGNORE_MISSING)"
+        "contents": "get_context_instance_by_id(${1:\\$id}, ${2:\\$strictness = IGNORE_MISSING})"
     }, {
         "trigger": "has_capability\tMoodle",
-        "contents": "has_capability(\\$capability, context \\$context, \\$user = null, \\$doanything = true)"
+        "contents": "has_capability(${1:\\$capability}, ${2:context \\$context}, ${3:\\$user = null}, ${4:\\$doanything = true})"
     }, {
         "trigger": "require_capability\tMoodle",
-        "contents": "require_capability(\\$capability, context \\$context, \\$userid = null, \\$doanything = true, \\$errormessage = 'nopermissions', \\$stringfile = '')"
+        "contents": "require_capability(${1:\\$capability}, ${2:context \\$context}, ${3:\\$userid = null}, ${4:\\$doanything = true}, ${5:\\$errormessage = 'nopermissions'}, ${6:\\$stringfile = ''})"
     }, {
         "trigger": "require_login\tMoodle",
-        "contents": "require_login(\\$courseorid = NULL, \\$autologinguest = true, \\$cm = NULL, \\$setwantsurltome = true, \\$preventredirect = false)"
+        "contents": "require_login(${1:\\$courseorid = NULL}, ${2:\\$autologinguest = true}, ${3:\\$cm = NULL}, ${4:\\$setwantsurltome = true}, ${5:\\$preventredirect = false})"
     }, {
         "trigger": "require_course_login\tMoodle",
-        "contents": "require_course_login(\\$courseorid, \\$autologinguest = true, \\$cm = NULL, \\$setwantsurltome = true, \\$preventredirect = false)"
+        "contents": "require_course_login(${1:\\$courseorid}, ${2:\\$autologinguest = true}, ${3:\\$cm = NULL}, ${4:\\$setwantsurltome = true}, ${5:\\$preventredirect = false})"
     }, {
         "trigger": "get_users_by_capability\tMoodle",
-        "contents": "get_users_by_capability(context \\$context, \\$capability, \\$fields = '', \\$sort = '', \\$limitfrom = '', \\$limitnum = '', \\$groups = '', \\$exceptions = '', \\$doanything_ignored = null, \\$view_ignored = null, \\$useviewallgroups = false)"
+        "contents": "get_users_by_capability(${1:context \\$context}, ${2:\\$capability}, ${3:\\$fields = ''}, ${4:\\$sort = ''}, ${5:\\$limitfrom = ''}, ${6:\\$limitnum = ''}, ${7:\\$groups = ''}, ${8:\\$exceptions = ''}, ${9:\\$doanything_ignored = null}, ${10:\\$view_ignored = null}, ${11:\\$useviewallgroups = false})"
     }, {
         "trigger": "isguestuser\tMoodle",
-        "contents": "isguestuser(\\$user = null)"
+        "contents": "isguestuser(${1:\\$user = null})"
     }, {
         "trigger": "isloggedin\tMoodle",
         "contents": "isloggedin()"
     }, {
         "trigger": "is_siteadmin\tMoodle",
-        "contents": "is_siteadmin(\\$user_or_id = null)"
+        "contents": "is_siteadmin(${1:\\$user_or_id = null})"
     }, {
         "trigger": "is_guest\tMoodle",
-        "contents": "is_guest(context \\$context, \\$user = null)"
-    }, {
+        "contents": "is_guest(${1:context \\$context}, ${2:\\$user = null})"
+    },{
         "trigger": "is_viewing\tMoodle",
-        "contents": "is_viewing(context \\$context, \\$user = null, \\$withcapability = '')"
+        "contents": "is_viewing(${1:context \\$context}, ${2: \\$user = null}, ${3: \\$withcapability = ''})"
     }, {
         "trigger": "get_manager\tMoodle",
         "contents": "\\$DB->get_manager()"
     }, {
         "trigger": "get_record\tMoodle",
-        "contents": "\\$DB->get_record(\\$table, array \\$conditions, \\$fields='*', \\$strictness=IGNORE_MISSING)"
+        "contents": "\\$DB->get_record(${1:\\$table}, ${2: array \\$conditions}, ${3: \\$fields='*'}, ${4: \\$strictness=IGNORE_MISSING})"
     }, {
         "trigger": "get_record_select\tMoodle",
-        "contents": "\\$DB->get_record_select(\\$table, \\$select, array \\$params=null, \\$fields='*', \\$strictness=IGNORE_MISSING)"
+        "contents": "\\$DB->get_record_select(${1:\\$table}, ${2: \\$select}, ${3: array \\$params=null}, ${4: \\$fields='*'}, ${5: \\$strictness=IGNORE_MISSING})"
     }, {
         "trigger": "get_record_sql\tMoodle",
-        "contents": "\\$DB->get_record_sql(\\$sql, array \\$params=null, \\$strictness=IGNORE_MISSING)"
+        "contents": "\\$DB->get_record_sql(${1:\\$sql}, ${2: array \\$params=null}, ${3: \\$strictness=IGNORE_MISSING})"
     }, {
         "trigger": "get_records\tMoodle",
-        "contents": "\\$DB->get_records(\\$table, array \\$conditions=null, \\$sort='', \\$fields='*', \\$limitfrom=0, \\$limitnum=0)"
+        "contents": "\\$DB->get_records(${1:\\$table}, ${2: array \\$conditions=null}, ${3: \\$sort=''}, ${4: \\$fields='*'}, ${5: \\$limitfrom=0}, ${6: \\$limitnum=0})"
     }, {
         "trigger": "get_records_select\tMoodle",
-        "contents": "\\$DB->get_records_select(\\$table, \\$select, array \\$params=null, \\$sort='', \\$fields='*', \\$limitfrom=0, \\$limitnum=0)"
+        "contents": "\\$DB->get_records_select(${1:\\$table}, ${2: \\$select}, ${3: array \\$params=null}, ${4: \\$sort=''}, ${5: \\$fields='*'}, ${6: \\$limitfrom=0}, ${7: \\$limitnum=0})"
     }, {
         "trigger": "get_records_sql\tMoodle",
-        "contents": "\\$DB->get_records_sql(\\$sql, array \\$params=null, \\$limitfrom=0, \\$limitnum=0)"
+        "contents": "\\$DB->get_records_sql(${1:\\$sql}, ${2: array \\$params=null}, ${3: \\$limitfrom=0}, ${4: \\$limitnum=0})"
     }, {
         "trigger": "get_records_list\tMoodle",
-        "contents": "\\$DB->get_records_list(\\$table, \\$field, array \\$values, \\$sort='', \\$fields='*', \\$limitfrom='', \\$limitnum='')"
+        "contents": "\\$DB->get_records_list(${1:\\$table}, ${2: \\$field}, ${3: array \\$values}, ${4: \\$sort=''}, ${5: \\$fields='*'}, ${6: \\$limitfrom=''}, ${7: \\$limitnum=''})"
     }, {
         "trigger": "get_records_menu\tMoodle",
-        "contents": "\\$DB->get_records_menu(\\$table, array \\$conditions=null, \\$sort='', \\$fields='*', \\$limitfrom=0, \\$limitnum=0)"
+        "contents": "\\$DB->get_records_menu(${1:\\$table}, ${2: array \\$conditions=null}, ${3: \\$sort=''}, ${4: \\$fields='*'}, ${5: \\$limitfrom=0}, ${6: \\$limitnum=0})"
     }, {
         "trigger": "get_records_select_menu\tMoodle",
-        "contents": "\\$DB->get_records_select_menu(\\$table, \\$select, array \\$params=null, \\$sort='', \\$fields='*', \\$limitfrom=0, \\$limitnum=0)"
+        "contents": "\\$DB->get_records_select_menu(${1:\\$table}, ${2: \\$select}, ${3: array \\$params=null}, ${4: \\$sort=''}, ${5: \\$fields='*'}, ${6: \\$limitfrom=0}, ${7: \\$limitnum=0})"
     }, {
         "trigger": "get_records_sql_menu\tMoodle",
-        "contents": "\\$DB->get_records_sql_menu(\\$sql, array \\$params=null, \\$limitfrom=0, \\$limitnum=0)"
+        "contents": "\\$DB->get_records_sql_menu(${1:\\$sql}, ${2: array \\$params=null}, ${3: \\$limitfrom=0}, ${4: \\$limitnum=0})"
     }, {
         "trigger": "count_records\tMoodle",
-        "contents": "\\$DB->count_records(\\$table, array \\$conditions=null) "
+        "contents": "\\$DB->count_records(${1:\\$table}, ${2: array \\$conditions=null}) "
     }, {
         "trigger": "count_records_select\tMoodle",
-        "contents": "\\$DB->count_records_select(\\$table, \\$select, array \\$params=null, \\$countitem='COUNT(x)')"
+        "contents": "\\$DB->count_records_select(${1:\\$table}, ${2: \\$select}, ${3: array \\$params=null}, ${4: \\$countitem='COUNT(x)'})"
     }, {
         "trigger": "count_records_sql\tMoodle",
-        "contents": "\\$DB->count_records_sql(\\$sql, array \\$params=null) "
+        "contents": "\\$DB->count_records_sql(${1:\\$sql}, ${2: array \\$params=null}) "
     }, {
         "trigger": "record_exists\tMoodle",
-        "contents": "\\$DB->record_exists(\\$table, array \\$conditions=null)"
+        "contents": "\\$DB->record_exists(${1:\\$table}, ${2: array \\$conditions=null})"
     }, {
         "trigger": "record_exists_select\tMoodle",
-        "contents": "\\$DB->record_exists_select(\\$table, \\$select, array \\$params=null)"
+        "contents": "\\$DB->record_exists_select(${1:\\$table}, ${2: \\$select}, ${3: array \\$params=null})"
     }, {
         "trigger": "record_exists_sql\tMoodle",
-        "contents": "\\$DB->record_exists_sql(\\$sql, array \\$params=null)"
+        "contents": "\\$DB->record_exists_sql(${1:\\$sql}, ${2: array \\$params=null})"
     }, {
         "trigger": "get_field\tMoodle",
-        "contents": "\\$DB->get_field(\\$table, \\$return, array \\$conditions, \\$strictness=IGNORE_MISSING)"
+        "contents": "\\$DB->get_field(${1:\\$table}, ${2: \\$return}, ${3: array \\$conditions}, ${4: \\$strictness=IGNORE_MISSING})"
     }, {
         "trigger": "get_field_select\tMoodle",
-        "contents": "\\$DB->get_field_select(\\$table, \\$return, \\$select, array \\$params=null, \\$strictness=IGNORE_MISSING)"
+        "contents": "\\$DB->get_field_select(${1:\\$table}, ${2: \\$return}, ${3: \\$select}, ${4: array \\$params=null}, ${5: \\$strictness=IGNORE_MISSING})"
     }, {
         "trigger": "get_field_sql\tMoodle",
-        "contents": "\\$DB->get_field_sql(\\$sql, array \\$params=null, \\$strictness=IGNORE_MISSING)"
+        "contents": "\\$DB->get_field_sql(${1:\\$sql}, ${2: array \\$params=null}, ${3: \\$strictness=IGNORE_MISSING})"
     }, {
         "trigger": "get_fieldset_select\tMoodle",
-        "contents": "\\$DB->get_fieldset_select(\\$table, \\$return, \\$select, array \\$params=null)"
+        "contents": "\\$DB->get_fieldset_select(${1:\\$table}, ${2: \\$return}, ${3: \\$select}, ${4: array \\$params=null})"
     }, {
         "trigger": "get_fieldset_sql\tMoodle",
-        "contents": "\\$DB->get_fieldset_sql(\\$sql, array \\$params=null)"
+        "contents": "\\$DB->get_fieldset_sql(${1:\\$sql}, ${2: array \\$params=null})"
     }, {
         "trigger": "set_field\tMoodle",
-        "contents": "\\$DB->set_field(\\$table, \\$newfield, \\$newvalue, array \\$conditions=null)"
+        "contents": "\\$DB->set_field(${1:\\$table}, ${2: \\$newfield}, ${3: \\$newvalue}, ${4: array \\$conditions=null})"
     }, {
         "trigger": "set_field_select\tMoodle",
-        "contents": "\\$DB->set_field_select(\\$table, \\$newfield, \\$newvalue, \\$select, array \\$params=null)"
+        "contents": "\\$DB->set_field_select(${1:\\$table}, ${2: \\$newfield}, ${3: \\$newvalue}, ${4: \\$select}, ${5: array \\$params=null})"
     }, {
         "trigger": "delete_records\tMoodle",
-        "contents": "\\$DB->delete_records(\\$table, array \\$conditions=null)"
+        "contents": "\\$DB->delete_records(${1:\\$table}, ${2: array \\$conditions=null})"
     }, {
         "trigger": "delete_records_select\tMoodle",
-        "contents": "\\$DB->delete_records_select(\\$table, \\$select, array \\$params=null)"
+        "contents": "\\$DB->delete_records_select(${1:\\$table}, ${2: \\$select}, ${3: array \\$params=null})"
     }, {
         "trigger": "insert_record\tMoodle",
-        "contents": "\\$DB->insert_record(\\$table, \\$dataobject, \\$returnid=true, \\$bulk=false)"
+        "contents": "\\$DB->insert_record(${1:\\$table}, ${2: \\$dataobject}, ${3: \\$returnid=true}, ${4: \\$bulk=false})"
     }, {
         "trigger": "update_record\tMoodle",
-        "contents": "\\$DB->update_record(\\$table, \\$dataobject, \\$bulk=false)"
+        "contents": "\\$DB->update_record(${1:\\$table}, ${2: \\$dataobject}, ${3: \\$bulk=false})"
     }, {
         "trigger": "execute\tMoodle",
-        "contents": "\\$DB->execute(\\$sql, array \\$parms=null)"
+        "contents": "\\$DB->execute(${1:\\$sql}, ${2: array \\$parms=null})"
     }, {
         "trigger": "get_recordset\tMoodle",
-        "contents": "\\$DB->get_recordset(\\$table, array \\$conditions=null, \\$sort='', \\$fields='*', \\$limitfrom=0, \\$limitnum=0)"
+        "contents": "\\$DB->get_recordset(${1:\\$table}, ${2: array \\$conditions=null}, ${3: \\$sort=''}, ${4: \\$fields='*'}, ${5: \\$limitfrom=0}, ${6: \\$limitnum=0})"
     }, {
         "trigger": "get_recordset_select\tMoodle",
-        "contents": "\\$DB->get_recordset_select(\\$table, \\$select, array \\$params=null, \\$sort='', \\$fields='*', \\$limitfrom=0, \\$limitnum=0)"
+        "contents": "\\$DB->get_recordset_select(${1:\\$table}, ${2: \\$select}, ${3: array \\$params=null}, ${4: \\$sort=''}, ${5: \\$fields='*'}, ${6: \\$limitfrom=0}, ${7: \\$limitnum=0})"
     }, {
         "trigger": "get_recordset_sql\tMoodle",
-        "contents": "\\$DB->get_recordset_sql(\\$sql, array \\$params=null, \\$limitfrom=0, \\$limitnum=0)"
+        "contents": "\\$DB->get_recordset_sql(${1:\\$sql}, ${2: array \\$params=null}, ${3: \\$limitfrom=0}, ${4: \\$limitnum=0})"
     }, {
         "trigger": "get_recordset_list\tMoodle",
-        "contents": "\\$DB->get_recordset_list(\\$table, \\$field='', \\$values='', \\$sort='', \\$fields='*', \\$limitfrom='', \\$limitnum='')"
+        "contents": "\\$DB->get_recordset_list(${1:\\$table}, ${2: \\$field=''}, ${3: \\$values=''}, ${4: \\$sort=''}, ${5: \\$fields='*'}, ${6: \\$limitfrom=''}, ${7: \\$limitnum=''})"
     }, {
         "trigger": "start_delegated_transaction\tMoodle",
         "contents": "\\$DB->start_delegated_transaction()"
@@ -164,124 +165,124 @@
         "contents": "allow_commit()"
     }, {
         "trigger": "sql_bitand\tMoodle",
-        "contents": "\\$DB->sql_bitand(\\$int1, \\$int2)"
+        "contents": "\\$DB->sql_bitand(${1:\\$int1}, ${2: \\$int2})"
     }, {
         "trigger": "sql_bitnot\tMoodle",
-        "contents": "\\$DB->sql_bitnot(\\$int1)"
+        "contents": "\\$DB->sql_bitnot(${1:\\$int1})"
     }, {
         "trigger": "sql_bitor\tMoodle",
-        "contents": "\\$DB->sql_bitor(\\$int1, \\$int2)"
+        "contents": "\\$DB->sql_bitor(${1:\\$int1}, ${2: \\$int2})"
     }, {
         "trigger": "sql_bitxor\tMoodle",
-        "contents": "\\$DB->sql_bitxor(\\$int1, \\$int2)"
+        "contents": "\\$DB->sql_bitxor(${1:\\$int1}, ${2: \\$int2})"
     }, {
         "trigger": "sql_null_from_clause\tMoodle",
         "contents": "\\$DB->sql_null_from_clause()"
     }, {
         "trigger": "sql_ceil\tMoodle",
-        "contents": "\\$DB->sql_ceil(\\$fieldname)"
+        "contents": "\\$DB->sql_ceil(${1:\\$fieldname})"
     }, {
         "trigger": "sql_like\tMoodle",
-        "contents": "\\$DB->sql_like(\\$fieldname, \\$param, \\$casesensitive = true, \\$accentsensitive = true, \\$notlike = false, \\$escapechar = ' \\ ')"
+        "contents": "\\$DB->sql_like(${1:\\$fieldname}, ${2: \\$param}, ${3: \\$casesensitive = true}, ${4: \\$accentsensitive = true}, ${5: \\$notlike = false}, ${6: \\$escapechar = ' \\ '})"
     }, {
         "trigger": "sql_length\tMoodle",
-        "contents": "\\$DB->sql_length(\\$fieldname)"
+        "contents": "\\$DB->sql_length(${1:\\$fieldname})"
     }, {
         "trigger": "sql_modulo\tMoodle",
-        "contents": "\\$DB->sql_modulo(\\$int1, \\$int2)"
+        "contents": "\\$DB->sql_modulo(${1:\\$int1}, ${2: \\$int2})"
     }, {
         "trigger": "sql_position\tMoodle",
-        "contents": "\\$DB->sql_position(\\$needle, \\$haystack)"
+        "contents": "\\$DB->sql_position(${1:\\$needle}, ${2: \\$haystack})"
     }, {
         "trigger": "sql_substr\tMoodle",
-        "contents": "\\$DB->sql_substr(\\$expr, \\$start, \\$length=false)"
+        "contents": "\\$DB->sql_substr(${1:\\$expr}, ${2: \\$start}, ${3: \\$length=false})"
     }, {
         "trigger": "sql_cast_char2int\tMoodle",
-        "contents": "\\$DB->sql_cast_char2int(\\$fieldname, \\$text=false)"
+        "contents": "\\$DB->sql_cast_char2int(${1:\\$fieldname}, ${2: \\$text=false})"
     }, {
         "trigger": "sql_cast_char2real\tMoodle",
-        "contents": "\\$DB->sql_cast_char2real(\\$fieldname, \\$text=false)"
+        "contents": "\\$DB->sql_cast_char2real(${1:\\$fieldname}, ${2: \\$text=false})"
     }, {
         "trigger": "sql_compare_text\tMoodle",
-        "contents": "\\$DB->sql_compare_text(\\$fieldname, \\$numchars=32)"
+        "contents": "\\$DB->sql_compare_text(${1:\\$fieldname}, ${2: \\$numchars=32})"
     }, {
         "trigger": "sql_order_by_text\tMoodle",
-        "contents": "\\$DB->sql_order_by_text(\\$fieldname, \\$numchars=32)"
+        "contents": "\\$DB->sql_order_by_text(${1:\\$fieldname}, ${2: \\$numchars=32})"
     }, {
         "trigger": "sql_concat\tMoodle",
         "contents": "\\$DB->sql_concat()"
     }, {
         "trigger": "sql_concat_join\tMoodle",
-        "contents": "\\$DB->sql_concat_join(\\$separator=' ', \\$elements=array())"
+        "contents": "\\$DB->sql_concat_join(${1:\\$separator=' '}, ${2: \\$elements=array()})"
     }, {
         "trigger": "sql_fullname\tMoodle",
-        "contents": "\\$DB->sql_fullname(\\$first='firstname', \\$last='lastname')"
+        "contents": "\\$DB->sql_fullname(${1:\\$first='firstname'}, ${2: \\$last='lastname'})"
     }, {
         "trigger": "sql_isempty\tMoodle",
-        "contents": "\\$DB->sql_isempty(\\$tablename, \\$fieldname, \\$nullablefield, \\$textfield)"
+        "contents": "\\$DB->sql_isempty(${1:\\$tablename}, ${2: \\$fieldname}, ${3: \\$nullablefield}, ${4: \\$textfield})"
     }, {
         "trigger": "sql_isnotempty\tMoodle",
-        "contents": "\\$DB->sql_isnotempty(\\$tablename, \\$fieldname, \\$nullablefield, \\$textfield)"
+        "contents": "\\$DB->sql_isnotempty(${1:\\$tablename}, ${2: \\$fieldname}, ${3: \\$nullablefield}, ${4: \\$textfield})"
     }, {
         "trigger": "sql_empty\tMoodle",
         "contents": "\\$DB->sql_empty()"
     }, {
         "trigger": "set_debug\tMoodle",
-        "contents": "\\$DB->set_debug(true)"
+        "contents": "\\$DB->set_debug(${1:true})"
     }, {
         "trigger": "get_course\tMoodle",
-        "contents": "get_course(\\$courseid)"
+        "contents": "get_course(${1:\\$courseid})"
     }, {
         "trigger": "get_file_content\tMoodle",
-        "contents": "get_file_content('userfile')"
+        "contents": "get_file_content(${1:'userfile'})"
     }, {
         "trigger": "get_new_filename\tMoodle",
-        "contents": "get_new_filename('userfile')"
+        "contents": "get_new_filename(${1:'userfile'})"
     }, {
         "trigger": "save_file\tMoodle",
-        "contents": "save_file('userfile', \\$fullpath, \\$override)"
+        "contents": "save_file(${1:'userfile'}, ${2: \\$fullpath}, ${3: \\$override})"
     }, {
         "trigger": "save_stored_file\tMoodle",
-        "contents": "save_stored_file('userfile', ...)"
+        "contents": "save_stored_file(${1:'userfile'}, ${2: ...})"
     }, {
         "trigger": "file_get_submitted_draft_itemid\tMoodle",
-        "contents": "file_get_submitted_draft_itemid('entry')"
+        "contents": "file_get_submitted_draft_itemid(${1:'entry'})"
     }, {
         "trigger": "file_prepare_draft_area\tMoodle",
-        "contents": "file_prepare_draft_area(\\$draftid_editor, \\$context->id, 'mod_MYMOD', 'entry', \\$entry->id, array('subdirs'=>true), \\$entry->definition)"
+        "contents": "file_prepare_draft_area(${1:\\$draftid_editor}, ${2: \\$context->id}, ${3: 'mod_MYMOD'}, ${4: 'entry'}, ${5: \\$entry->id}, ${6: array('subdirs'=>true)}, ${7: \\$entry->definition})"
     }, {
         "trigger": "file_save_draft_area_files\tMoodle",
-        "contents": "file_save_draft_area_files(\\$data->attachments, \\$context->id, 'mod_glossary', 'attachment', \\$entry->id, array('subdirs' => 0, 'maxbytes' => \\$maxbytes, 'maxfiles' => 50))"
+        "contents": "file_save_draft_area_files(${1:\\$data->attachments}, ${2: \\$context->id}, ${3: 'mod_glossary'}, ${4: 'attachment'}, ${5: \\$entry->id}, ${6: array('subdirs' => 0}, ${7: 'maxbytes' => \\$maxbytes}, ${8: 'maxfiles' => 50)})"
     }, {
         "trigger": "file_rewrite_pluginfile_urls\tMoodle",
-        "contents": "file_rewrite_pluginfile_urls(\\$messagetext, 'pluginfile.php', \\$context->id, 'mod_mymodule', 'proper_file_area', \\$itemid)"
+        "contents": "file_rewrite_pluginfile_urls(${1:\\$messagetext}, ${2: 'pluginfile.php'}, ${3: \\$context->id}, ${4: 'mod_mymodule'}, ${5: 'proper_file_area'}, ${6: \\$itemid})"
     }, {
         "trigger": "file_prepare_standard_editor\tMoodle",
-        "contents": "file_prepare_standard_editor(\\$data, 'textfield', \\$textfieldoptions, \\$context, 'mod_somemodule', 'somearea', \\$data->id)"
+        "contents": "file_prepare_standard_editor(${1:\\$data}, ${2: 'textfield'}, ${3: \\$textfieldoptions}, ${4: \\$context}, ${5: 'mod_somemodule'}, ${6: 'somearea'}, ${7: \\$data->id})"
     }, {
         "trigger": "file_prepare_standard_filemanager\tMoodle",
-        "contents": "file_prepare_standard_filemanager(\\$entry, 'attachment', \\$attachmentoptions, \\$context, 'mod_mymod', 'attachment', \\$entry->id)"
+        "contents": "file_prepare_standard_filemanager(${1:\\$entry}, ${2: 'attachment'}, ${3: \\$attachmentoptions}, ${4: \\$context}, ${5: 'mod_mymod'}, ${6: 'attachment'}, ${7: \\$entry->id})"
     }, {
         "trigger": "file_postupdate_standard_filemanager\tMoodle",
-        "contents": "file_postupdate_standard_filemanager(\\$entry, 'attachment', \\$attachmentoptions, \\$context, 'mod_mymod', 'attachment', \\$entry->id)"
+        "contents": "file_postupdate_standard_filemanager(${1:\\$entry}, ${2: 'attachment'}, ${3: \\$attachmentoptions}, ${4: \\$context}, ${5: 'mod_mymod'}, ${6: 'attachment'}, ${7: \\$entry->id})"
     }, {
         "trigger": "file_postupdate_standard_editor\tMoodle",
-        "contents": "file_postupdate_standard_editor(\\$data, 'textfield', \\$textfieldoptions, \\$context, 'mod_somemodule', 'somearea', \\$data->id)"
+        "contents": "file_postupdate_standard_editor(${1:\\$data}, ${2: 'textfield'}, ${3: \\$textfieldoptions}, ${4: \\$context}, ${5: 'mod_somemodule'}, ${6: 'somearea'}, ${7: \\$data->id})"
     }, {
         "trigger": "make_pluginfile_url\tMoodle",
-        "contents": "make_pluginfile_url(\\$file->get_contextid(), \\$file->get_component(), \\$file->get_filearea(), \\$file->get_itemid(), \\$file->get_filepath(), \\$file->get_filename())"
+        "contents": "make_pluginfile_url(${1:\\$file->get_contextid()}, ${2: \\$file->get_component()}, ${3: \\$file->get_filearea()}, ${4: \\$file->get_itemid()}, ${5: \\$file->get_filepath()}, ${6: \\$file->get_filename()})"
     }, {
         "trigger": "myPLUGIN_pluginfile\tMoodle",
-        "contents": "myPLUGIN_pluginfile(\\$course, \\$cm, \\$context, \\$filearea, \\$args, \\$forcedownload, array \\$options=array())"
+        "contents": "myPLUGIN_pluginfile(${1:\\$course}, ${2: \\$cm}, ${3: \\$context}, ${4: \\$filearea}, ${5: \\$args}, ${6: \\$forcedownload}, ${7: array \\$options=array()})"
     }, {
         "trigger": "get_file_storage\tMoodle",
         "contents": "get_file_storage()"
     }, {
         "trigger": "get_file\tMoodle",
-        "contents": "get_file(\\$context->id, 'mod_MYPLUGIN', \\$filearea, \\$itemid, \\$filepath, \\$filename)"
+        "contents": "get_file(${1:\\$context->id}, ${2: 'mod_MYPLUGIN'}, ${3: \\$filearea}, ${4: \\$itemid}, ${5: \\$filepath}, ${6: \\$filename})"
     }, {
         "trigger": "send_file\tMoodle",
-        "contents": "send_file(\\$file, 86400, 0, \\$forcedownload, \\$options)"
+        "contents": "send_file(${1:\\$file}, ${2: 86400}, ${3: 0}, ${4: \\$forcedownload}, ${5: \\$options})"
     }, {
         "trigger": "get_file_browser\tMoodle",
         "contents": "get_file_browser()"
@@ -290,7 +291,7 @@
         "contents": "get_system_context()"
     }, {
         "trigger": "get_file_info\tMoodle",
-        "contents": "get_file_info(\\$context, \\$component, \\$filearea, \\$itemid, '/', \\$filename)"
+        "contents": "get_file_info(${1:\\$context}, ${2: \\$component}, ${3: \\$filearea}, ${4: \\$itemid}, ${5: '\/'}, ${6: \\$filename})"
     }, {
         "trigger": "get_parent\tMoodle",
         "contents": "get_parent()"
@@ -308,10 +309,10 @@
         "contents": "get_params()"
     }, {
         "trigger": "create_file_from_pathname\tMoodle",
-        "contents": "create_file_from_pathname(\\$file_record, \\$from_zip_file)"
+        "contents": "create_file_from_pathname(${1:\\$file_record}, ${2: \\$from_zip_file})"
     }, {
         "trigger": "get_area_files\tMoodle",
-        "contents": "get_area_files(\\$contextid, 'mod_MYMOD', 'AREA', \\$submission->id)"
+        "contents": "get_area_files(${1:\\$contextid}, ${2: 'mod_MYMOD'}, ${3: 'AREA'}, ${4: \\$submission->id})"
     }, {
         "trigger": "get_filename\tMoodle",
         "contents": "get_filename()"
@@ -332,10 +333,10 @@
         "contents": "get_filearea()"
     }, {
         "trigger": "fileinfo\tMoodle",
-        "contents": "\\$fileinfo = array('contextid' => \\$context->id, 'component' => 'mod_MYMOD', 'filearea' => 'myarea', 'itemid' => 0, 'filepath' => '/', 'filename' => 'myfile.txt')"
+        "contents": "\\$fileinfo = array(${1:'contextid' => \\$context->id}, ${2: 'component' => 'mod_MYMOD'}, ${3: 'filearea' => 'myarea'}, ${4: 'itemid' => 0}, ${5: 'filepath' => '\/'}, ${6: 'filename' => 'myfile.txt'})"
     }, {
         "trigger": "create_file_from_string\tMoodle",
-        "contents": "create_file_from_string(\\$fileinfo, 'hello world')"
+        "contents": "create_file_from_string(${1:\\$fileinfo}, ${2: 'hello world'})"
     }, {
         "trigger": "get_content\tMoodle",
         "contents": "get_content()"
@@ -344,109 +345,109 @@
         "contents": "delete()"
     }, {
         "trigger": "addElementbutton\tMoodle",
-        "contents": "addElement('button', 'intro', get_string('buttonlabel'))"
+        "contents": "addElement(${1:'button'}, ${2: 'intro'}, ${3: get_string('buttonlabel')})"
     }, {
         "trigger": "addElementcheckbox\tMoodle",
-        "contents": "addElement('checkbox', 'ratingtime', get_string('ratingtime', 'forum'))"
+        "contents": "addElement(${1:'checkbox'}, ${2: 'ratingtime'}, ${3: get_string('ratingtime'}, ${4: 'forum')})"
     }, {
         "trigger": "addElementadvcheckbox\tMoodle",
-        "contents": "addElement('advcheckbox', 'ratingtime', get_string('ratingtime', 'forum'), 'Label displayed after checkbox', array('group' => 1), array(0, 1))"
+        "contents": "addElement(${1:'advcheckbox'}, ${2: 'ratingtime'}, ${3: get_string('ratingtime'}, ${4: 'forum')}, ${5: 'Label displayed after checkbox'}, ${6: array('group' => 1)}, ${7: array(0}, ${8: 1)})"
     }, {
         "trigger": "addElementchoosecoursefile\tMoodle",
-        "contents": "addElement('choosecoursefile', 'mediafile', get_string('mediafile', 'lesson'), array('courseid'=>\\$COURSE->id))"
+        "contents": "addElement(${1:'choosecoursefile'}, ${2: 'mediafile'}, ${3: get_string('mediafile'}, ${4: 'lesson')}, ${5: array('courseid'=>\\$COURSE->id)})"
     }, {
         "trigger": "addGroupRule\tMoodle",
-        "contents": "addGroupRule('elementname', array('value' => array(array(list, of, rule, params, but, fieldname))))"
+        "contents": "addGroupRule(${1:'elementname'}, ${2: array('value' => array(array(list}, ${3: of}, ${4: rule}, ${5: params}, ${6: but}, ${7: fieldname)))})"
     }, {
         "trigger": "addElementdate_time_selector\tMoodle",
-        "contents": "addElement('date_time_selector', 'assesstimestart', get_string('from'))"
+        "contents": "addElement(${1:'date_time_selector'}, ${2: 'assesstimestart'}, ${3: get_string('from')})"
     }, {
         "trigger": "createElement\tMoodle",
-        "contents": "createElement('radio', 'yesno', '', get_string('yes'), 1, \\$attributes)"
+        "contents": "createElement(${1:'radio'}, ${2: 'yesno'}, ${3: ''}, ${4: get_string('yes')}, ${5: 1}, ${6: \\$attributes})"
     }, {
         "trigger": "setDefault\tMoodle",
-        "contents": "setDefault('yesno', 0)"
+        "contents": "setDefault(${1:'yesno'}, ${2: 0})"
     }, {
         "trigger": "addElementselect\tMoodle",
-        "contents": "addElement('select', 'type', get_string('forumtype', 'forum'), \\$FORUM_TYPES, \\$attributes)"
+        "contents": "addElement(${1:'select'}, ${2: 'type'}, ${3: get_string('forumtype'}, ${4: 'forum')}, ${5: \\$FORUM_TYPES}, ${6: \\$attributes})"
     }, {
         "trigger": "setMultiple\tMoodle",
-        "contents": "setMultiple(true)"
+        "contents": "setMultiple(${1:true})"
     }, {
         "trigger": "addElementpassword\tMoodle",
-        "contents": "addElement('password', 'password', get_string('label'), \\$attributes)"
+        "contents": "addElement(${1:'password'}, ${2: 'password'}, ${3: get_string('label')}, ${4: \\$attributes})"
     }, {
         "trigger": "addElementhidden\tMoodle",
-        "contents": "addElement('hidden', 'reply', 'yes')"
+        "contents": "addElement(${1:'hidden'}, ${2: 'reply'}, ${3: 'yes'})"
     }, {
         "trigger": "addElementhtml\tMoodle",
-        "contents": "addElement('html', '<div class=qheader>')"
+        "contents": "addElement(${1:'html'}, ${2: '<div class=qheader>'})"
     }, {
         "trigger": "addElementmodgrade\tMoodle",
-        "contents": "addElement('modgrade', 'scale', get_string('grade'), false)"
+        "contents": "addElement(${1:'modgrade'}, ${2: 'scale'}, ${3: get_string('grade')}, ${4: false})"
     }, {
         "trigger": "addElementstatic\tMoodle",
-        "contents": "addElement('static', 'description', get_string('description', 'exercise'),get_string('descriptionofexercise', 'exercise', \\$COURSE->students))"
+        "contents": "addElement(${1:'static'}, ${2: 'description'}, ${3: get_string('description'}, ${4: 'exercise')}, ${5:get_string('descriptionofexercise'}, ${6: 'exercise'}, ${7: \\$COURSE->students)})"
     }, {
         "trigger": "addElementtext\tMoodle",
-        "contents": "addElement('text', 'name', get_string('forumname', 'forum'), \\$attributes)"
+        "contents": "addElement(${1:'text'}, ${2: 'name'}, ${3: get_string('forumname'}, ${4: 'forum')}, ${5: \\$attributes})"
     }, {
         "trigger": "addElementtextarea\tMoodle",
-        "contents": "addElement('textarea', 'introduction', get_string('introtext', 'survey'), 'wrap=virtual rows=20 cols=50')"
+        "contents": "addElement(${1:'textarea'}, ${2: 'introduction'}, ${3: get_string('introtext'}, ${4: 'survey')}, ${5: 'wrap=virtual rows=20 cols=50'})"
     }, {
         "trigger": "addElementrecaptcha\tMoodle",
-        "contents": "addElement('recaptcha', 'recaptcha_field_name', \\$attributes)"
+        "contents": "addElement(${1:'recaptcha'}, ${2: 'recaptcha_field_name'}, ${3: \\$attributes})"
     }, {
         "trigger": "addElementpasswordunmask\tMoodle",
-        "contents": "addElement('passwordunmask', 'password', get_string('label'), \\$attributes)"
+        "contents": "addElement(${1:'passwordunmask'}, ${2: 'password'}, ${3: get_string('label')}, ${4: \\$attributes})"
     }, {
         "trigger": "addElementselectyesno\tMoodle",
-        "contents": "addElement('selectyesno', 'maxbytes', get_string('maxattachmentsize', 'forum'))"
+        "contents": "addElement(${1:'selectyesno'}, ${2: 'maxbytes'}, ${3: get_string('maxattachmentsize'}, ${4: 'forum')})"
     }, {
         "trigger": "addElementselectwithlink\tMoodle",
-        "contents": "addElement('selectwithlink', 'scaleid', get_string('scale'), \\$options, null, array('link' => URL, 'label' => get_string('scalescustomcreate')))"
+        "contents": "addElement(${1:'selectwithlink'}, ${2: 'scaleid'}, ${3: get_string('scale')}, ${4: \\$options}, ${5: null}, ${6: array('link' => URL}, ${7: 'label' => get_string('scalescustomcreate'))})"
     }, {
         "trigger": "addElementdate_selector\tMoodle",
-        "contents": "addElement('date_selector', 'assesstimefinish', get_string('to'))"
+        "contents": "addElement(${1:'date_selector'}, ${2: 'assesstimefinish'}, ${3: get_string('to')})"
     }, {
         "trigger": "addElementduration\tMoodle",
-        "contents": "addElement('duration', 'timelimit', get_string('timelimit', 'quiz'))"
+        "contents": "addElement(${1:'duration'}, ${2: 'timelimit'}, ${3: get_string('timelimit'}, ${4: 'quiz')})"
     }, {
         "trigger": "addElementeditor\tMoodle",
-        "contents": "addElement('editor', 'fieldname', get_string('labeltext', 'langfile'))"
+        "contents": "addElement(${1:'editor'}, ${2: 'fieldname'}, ${3: get_string('labeltext'}, ${4: 'langfile')})"
     }, {
         "trigger": "addElementfilepicker\tMoodle",
-        "contents": "addElement('filepicker', 'userfile', get_string('file'), null, array('maxbytes' => \\$maxbytes, 'accepted_types' => '*'))"
+        "contents": "addElement(${1:'filepicker'}, ${2: 'userfile'}, ${3: get_string('file')}, ${4: null}, ${5: array('maxbytes' => \\$maxbytes}, ${6: 'accepted_types' => '*')})"
     }, {
         "trigger": "addElementfilemanager\tMoodle",
-        "contents": "addElement('filemanager', 'attachments', get_string('attachment', 'moodle'), null,array('subdirs' => 0, 'maxbytes' => \\$maxbytes, 'maxfiles' => 50, 'accepted_types' => array('document') ))"
+        "contents": "addElement(${1:'filemanager'}, ${2: 'attachments'}, ${3: get_string('attachment'}, ${4: 'moodle')}, ${5: null}, ${6:array('subdirs' => 0}, ${7: 'maxbytes' => \\$maxbytes}, ${8: 'maxfiles' => 50}, ${9: 'accepted_types' => array('document') )})"
     }, {
         "trigger": "addElementtags\tMoodle",
-        "contents": "addElement('tags', 'field_name', \\$lable, \\$options, \\$attributes)"
+        "contents": "addElement(${1:'tags'}, ${2: 'field_name'}, ${3: \\$lable}, ${4: \\$options}, ${5: \\$attributes})"
     }, {
         "trigger": "addGroup\tMoodle",
-        "contents": "addGroup(\\$buttonarray, 'buttonar', '', array(' '), false)"
+        "contents": "addGroup(${1:\\$buttonarray}, ${2: 'buttonar'}, ${3: ''}, ${4: array(' ')}, ${5: false})"
     }, {
         "trigger": "addElementmodvisible\tMoodle",
-        "contents": "addElement('modvisible', 'visible', get_string('visible'))"
+        "contents": "addElement(${1:'modvisible'}, ${2: 'visible'}, ${3: get_string('visible')})"
     }, {
         "trigger": "addElementgrading\tMoodle",
-        "contents": "addElement('grading', 'advancedgrading', get_string('grade').':', array('gradinginstance' => \\$gradinginstance))"
+        "contents": "addElement(${1:'grading'}, ${2: 'advancedgrading'}, ${3: get_string('grade').':'}, ${4: array('gradinginstance' => \\$gradinginstance)})"
     }, {
         "trigger": "addElementquestioncategory\tMoodle",
-        "contents": "addElement('questioncategory', 'category', get_string('category', 'question'), array('contexts'=>\\$contexts, 'top'=>true, 'currentcat'=>\\$currentcat, 'nochildrenof'=>\\$currentcat))"
+        "contents": "addElement(${1:'questioncategory'}, ${2: 'category'}, ${3: get_string('category'}, ${4: 'question')}, ${5: array('contexts'=>\\$contexts}, ${6: 'top'=>true}, ${7: 'currentcat'=>\\$currentcat}, ${8: 'nochildrenof'=>\\$currentcat)})"
     }, {
         "trigger": "disabledIf\tMoodle",
-        "contents": "disabledIf('mycontrol', 'someselect', 'neq', 42)"
+        "contents": "disabledIf(${1:'mycontrol'}, ${2: 'someselect'}, ${3: 'neq'}, ${4: 42})"
     }, {
         "trigger": "addRule\tMoodle",
-        "contents": "addRule('elementname', get_string('error'), 'rule type', 'extraruledata', 'server'(default), false, false)"
+        "contents": "addRule(${1:'elementname'}, ${2: get_string('error')}, ${3: 'rule type'}, ${4: 'extraruledata'}, ${5: 'server'(default)}, ${6: false}, ${7: false})"
     }, {
         "trigger": "setHelpButton\tMoodle",
-        "contents": "setHelpButton('lessondefault', array('lessondefault', get_string('lessondefault', 'lesson'), 'lesson'))"
+        "contents": "setHelpButton(${1:'lessondefault'}, ${2: array('lessondefault'}, ${3: get_string('lessondefault'}, ${4: 'lesson')}, ${5: 'lesson')})"
     }, {
         "trigger": "addHelpButton\tMoodle",
-        "contents": "addHelpButton('api_key_field', 'api_key', 'block_extsearch')"
+        "contents": "addHelpButton(${1:'api_key_field'}, ${2: 'api_key'}, ${3: 'block_extsearch'})"
     }, {
         "trigger": "disable_form_change_checker\tMoodle",
         "contents": "disable_form_change_checker()"
@@ -455,37 +456,37 @@
         "contents": "setType()"
     }, {
         "trigger": "add_to_log\tMoodle",
-        "contents": "add_to_log(\\$courseid, \\$module, \\$action, \\$url='', \\$info='', \\$cm=0, \\$user=0)"
+        "contents": "add_to_log(${1:\\$courseid}, ${2: \\$module}, ${3: \\$action}, ${4: \\$url=''}, ${5: \\$info=''}, ${6: \\$cm=0}, ${7: \\$user=0})"
     }, {
         "trigger": "user_accesstime_log\tMoodle",
-        "contents": "user_accesstime_log(\\$courseid=0)"
+        "contents": "user_accesstime_log(${1:\\$courseid=0})"
     }, {
         "trigger": "get_logs\tMoodle",
-        "contents": "get_logs(\\$select, array \\$params=null, \\$order='l.time DESC', \\$limitfrom='', \\$limitnum='', &\\$totalcount)"
+        "contents": "get_logs(${1:\\$select}, ${2: array \\$params=null}, ${3: \\$order='l.time DESC'}, ${4: \\$limitfrom=''}, ${5: \\$limitnum=''}, ${6: &\\$totalcount})"
     }, {
         "trigger": "get_logs_usercourse\tMoodle",
-        "contents": "get_logs_usercourse(\\$userid, \\$courseid, \\$coursestart)"
+        "contents": "get_logs_usercourse(${1:\\$userid}, ${2: \\$courseid}, ${3: \\$coursestart})"
     }, {
         "trigger": "get_logs_userday\tMoodle",
-        "contents": "get_logs_userday(\\$userid, \\$courseid, \\$daystart)"
+        "contents": "get_logs_userday(${1:\\$userid}, ${2: \\$courseid}, ${3: \\$daystart})"
     }, {
         "trigger": "ignore_active\tMoodle",
         "contents": "\\$PAGE->navbar->ignore_active()"
     }, {
         "trigger": "navbaradd\tMoodle",
-        "contents": "\\$PAGE->navbar->add(get_string('name of thing'), new moodle_url('/a/link/if/you/want/one.php'))"
+        "contents": "\\$PAGE->navbar->add(${1:get_string('name of thing')}, ${2: new moodle_url('\/a\/link\/if\/you\/want\/one.php')})"
     }, {
         "trigger": "make_active\tMoodle",
         "contents": "make_active()"
     }, {
         "trigger": "settingsnavadd\tMoodle",
-        "contents": "\\$PAGE->settingsnav->add(get_string('setting'), new moodle_url('/a/link/if/you/want/one.php'), navigation_node::TYPE_CONTAINER)"
+        "contents": "\\$PAGE->settingsnav->add(${1:get_string('setting')}, ${2: new moodle_url('\/a\/link\/if\/you\/want\/one.php')}, ${3: navigation_node::TYPE_CONTAINER})"
     }, {
         "trigger": "navigation\tMoodle",
-        "contents": "\\$PAGE->navigation->find(\\$courseid, navigation_node::TYPE_COURSE)"
+        "contents": "\\$PAGE->navigation->find(${1:\\$courseid}, ${2: navigation_node::TYPE_COURSE})"
     }, {
         "trigger": "set_url\tMoodle",
-        "contents": "\\$PAGE->set_url(new moodle_url('/page/to/your/file.php', array('key' => 'value', 'id' => 3)))"
+        "contents": "\\$PAGE->set_url(${1:new moodle_url('\/page\/to\/your\/file.php'}, ${2: array('key' => 'value'}, ${3: 'id' => 3))})"
     }, {
         "trigger": "pagecontext\tMoodle",
         "contents": "\\$PAGE->context"
@@ -500,82 +501,82 @@
         "contents": "\\$PAGE->url"
     }, {
         "trigger": "required_param\tMoodle",
-        "contents": "required_param('id', PARAM_INT)"
+        "contents": "required_param(${1:'id'}, ${2: PARAM_INT})"
     }, {
         "trigger": "get_coursemodule_from_id\tMoodle",
-        "contents": "get_coursemodule_from_id('mymodulename', \\$cmid, 0, false, MUST_EXIST)"
+        "contents": "get_coursemodule_from_id(${1:'mymodulename'}, ${2: \\$cmid}, ${3: 0}, ${4: false}, ${5: MUST_EXIST})"
     }, {
         "trigger": "set_title\tMoodle",
-        "contents": "\\$PAGE->set_title('My modules page title')"
+        "contents": "\\$PAGE->set_title(${1:'My modules page title'})"
     }, {
         "trigger": "set_heading\tMoodle",
-        "contents": "\\$PAGE->set_heading('My modules page heading')"
+        "contents": "\\$PAGE->set_heading(${1:'My modules page heading'})"
     }, {
         "trigger": "set_contextcontext_system\tMoodle",
-        "contents": "\\$PAGE->set_context(context_system::instance())"
+        "contents": "\\$PAGE->set_context(${1:context_system::instance()})"
     }, {
         "trigger": "set_contextcontext_coursecat\tMoodle",
-        "contents": "\\$PAGE->set_context(context_coursecat::instance(\\$categoryid))"
+        "contents": "\\$PAGE->set_context(${1:context_coursecat::instance(\\$categoryid)})"
     }, {
         "trigger": "set_contextcontext_course\tMoodle",
-        "contents": "\\$PAGE->set_context(context_course::instance(\\$courseid))"
+        "contents": "\\$PAGE->set_context(${1:context_course::instance(\\$courseid)})"
     }, {
         "trigger": "set_contextcontext_module\tMoodle",
-        "contents": "\\$PAGE->set_context(context_module::instance(\\$moduleid))"
+        "contents": "\\$PAGE->set_context(${1:context_module::instance(\\$moduleid)})"
     }, {
         "trigger": "set_pagelayout\tMoodle",
-        "contents": "\\$PAGE->set_pagelayout('standard')"
+        "contents": "\\$PAGE->set_pagelayout(${1:'standard'})"
     }, {
         "trigger": "set_activity_record\tMoodle",
-        "contents": "\\$PAGE->set_activity_record(\\$activityrecord)"
+        "contents": "\\$PAGE->set_activity_record(${1:\\$activityrecord})"
     }, {
         "trigger": "set_blocks_editing_capability\tMoodle",
-        "contents": "\\$PAGE->set_blocks_editing_capability(\\$strcapability)"
+        "contents": "\\$PAGE->set_blocks_editing_capability(${1:\\$strcapability})"
     }, {
         "trigger": "set_button\tMoodle",
-        "contents": "\\$PAGE->set_button(\\$htmlstring)"
+        "contents": "\\$PAGE->set_button(${1:\\$htmlstring})"
     }, {
         "trigger": "set_cacheable\tMoodle",
-        "contents": "\\$PAGE->set_cacheable(true/false)"
+        "contents": "\\$PAGE->set_cacheable(${1:true\/false})"
     }, {
         "trigger": "set_category_by_id\tMoodle",
-        "contents": "\\$PAGE->set_category_by_id(\\$categoryid)"
+        "contents": "\\$PAGE->set_category_by_id(${1:\\$categoryid})"
     }, {
         "trigger": "set_cm\tMoodle",
-        "contents": "\\$PAGE->set_cm(\\$coursemodulerecord)"
+        "contents": "\\$PAGE->set_cm(${1:\\$coursemodulerecord})"
     }, {
         "trigger": "set_course\tMoodle",
-        "contents": "\\$PAGE->set_course(\\$courserecord)"
+        "contents": "\\$PAGE->set_course(${1:\\$courserecord})"
     }, {
         "trigger": "set_docs_path\tMoodle",
-        "contents": "\\$PAGE->set_docs_path(\\$strpath)"
+        "contents": "\\$PAGE->set_docs_path(${1:\\$strpath})"
     }, {
         "trigger": "set_focuscontrol\tMoodle",
-        "contents": "\\$PAGE->set_focuscontrol(\\$controlid)"
+        "contents": "\\$PAGE->set_focuscontrol(${1:\\$controlid})"
     }, {
         "trigger": "set_headingmenu\tMoodle",
-        "contents": "\\$PAGE->set_headingmenu(\\$htmlstring)"
+        "contents": "\\$PAGE->set_headingmenu(${1:\\$htmlstring})"
     }, {
         "trigger": "set_other_editing_capability\tMoodle",
-        "contents": "\\$PAGE->set_other_editing_capability(\\$strcapability)"
+        "contents": "\\$PAGE->set_other_editing_capability(${1:\\$strcapability})"
     }, {
         "trigger": "set_pagetype\tMoodle",
-        "contents": "\\$PAGE->set_pagetype(\\$strpagetype)"
+        "contents": "\\$PAGE->set_pagetype(${1:\\$strpagetype})"
     }, {
         "trigger": "set_periodic_refresh_delay\tMoodle",
-        "contents": "\\$PAGE->set_periodic_refresh_delay(\\$intdelay)"
+        "contents": "\\$PAGE->set_periodic_refresh_delay(${1:\\$intdelay})"
     }, {
         "trigger": "set_popup_notification_allowed\tMoodle",
-        "contents": "\\$PAGE->set_popup_notification_allowed(true/false)"
+        "contents": "\\$PAGE->set_popup_notification_allowed(${1:true\/false})"
     }, {
         "trigger": "set_subpage\tMoodle",
-        "contents": "\\$PAGE->set_subpage(\\$strsubpage)"
+        "contents": "\\$PAGE->set_subpage(${1:\\$strsubpage})"
     }, {
         "trigger": "add_body_class\tMoodle",
-        "contents": "\\$PAGE->add_body_class(\\$strcssclass)"
+        "contents": "\\$PAGE->add_body_class(${1:\\$strcssclass})"
     }, {
         "trigger": "add_body_classes\tMoodle",
-        "contents": "\\$PAGE->add_body_classes(\\$arrayofclasses)"
+        "contents": "\\$PAGE->add_body_classes(${1:\\$arrayofclasses})"
     }, {
         "trigger": "activityrecord\tMoodle",
         "contents": "\\$PAGE->activityrecord"
@@ -617,49 +618,49 @@
         "contents": "\\$PAGE->title"
     }, {
         "trigger": "label\tMoodle",
-        "contents": "\\$OUTPUT->label(html_label \\$label)"
+        "contents": "\\$OUTPUT->label(${1:html_label \\$label})"
     }, {
         "trigger": "link\tMoodle",
-        "contents": "\\$OUTPUT->link(\\$link)"
+        "contents": "\\$OUTPUT->link(${1:\\$link})"
     }, {
         "trigger": "image\tMoodle",
         "contents": "\\$OUTPUT->image()"
     }, {
         "trigger": "form\tMoodle",
-        "contents": "\\$OUTPUT->form(\\$form, \\$contents)"
+        "contents": "\\$OUTPUT->form(${1:\\$form}, ${2: \\$contents})"
     }, {
         "trigger": "confirm\tMoodle",
-        "contents": "\\$OUTPUT->confirm(\\$message, \\$formcontinue, \\$formcancel)"
+        "contents": "\\$OUTPUT->confirm(${1:\\$message}, ${2: \\$formcontinue}, ${3: \\$formcancel})"
     }, {
         "trigger": "button\tMoodle",
-        "contents": "\\$OUTPUT->button(\\$formwithbutton)"
+        "contents": "\\$OUTPUT->button(${1:\\$formwithbutton})"
     }, {
         "trigger": "htmllist\tMoodle",
-        "contents": "\\$OUTPUT->htmllist(\\$list)"
+        "contents": "\\$OUTPUT->htmllist(${1:\\$list})"
     }, {
         "trigger": "html_writer\tMoodle",
-        "contents": "html_writer::table(\\$table)"
+        "contents": "html_writer::table(${1:\\$table})"
     }, {
         "trigger": "select\tMoodle",
-        "contents": "\\$OUTPUT->select(\\$select)"
+        "contents": "\\$OUTPUT->select(${1:\\$select})"
     }, {
         "trigger": "html_selectmake\tMoodle",
-        "contents": "html_select::make(\\$options, 'choice1', 'value1')"
+        "contents": "html_select::make(${1:\\$options}, ${2: 'choice1'}, ${3: 'value1'})"
     }, {
         "trigger": "html_selectmake_time_selector\tMoodle",
-        "contents": "html_select::make_time_selector('days', 'myday', '120308000')"
+        "contents": "html_select::make_time_selector(${1:'days'}, ${2: 'myday'}, ${3: '120308000'})"
     }, {
         "trigger": "checkbox\tMoodle",
-        "contents": "\\$OUTPUT->checkbox(\\$checkbox, 'donotask')"
+        "contents": "\\$OUTPUT->checkbox(${1:\\$checkbox}, ${2: 'donotask'})"
     }, {
         "trigger": "old_icon_url\tMoodle",
-        "contents": "\\$OUTPUT->old_icon_url('moodlelogo')"
+        "contents": "\\$OUTPUT->old_icon_url(${1:'moodlelogo'})"
     }, {
         "trigger": "action_icon\tMoodle",
-        "contents": "\\$OUTPUT->action_icon(\\$icon)"
+        "contents": "\\$OUTPUT->action_icon(${1:\\$icon})"
     }, {
         "trigger": "box\tMoodle",
-        "contents": "\\$OUTPUT->box('A message of some kind')"
+        "contents": "\\$OUTPUT->box(${1:'A message of some kind'})"
     }, {
         "trigger": "box_start\tMoodle",
         "contents": "\\$OUTPUT->box_start()"
@@ -671,19 +672,19 @@
         "contents": "\\$OUTPUT->close_window_button()"
     }, {
         "trigger": "container\tMoodle",
-        "contents": "\\$OUTPUT->container('A message of some kind', 'important', 'notice')"
+        "contents": "\\$OUTPUT->container(${1:'A message of some kind'}, ${2: 'important'}, ${3: 'notice'})"
     }, {
         "trigger": "container_start\tMoodle",
-        "contents": "\\$OUTPUT->container_start('important', 'notice')"
+        "contents": "\\$OUTPUT->container_start(${1:'important'}, ${2: 'notice'})"
     }, {
         "trigger": "container_end\tMoodle",
         "contents": "\\$OUTPUT->container_end()"
     }, {
         "trigger": "continue_button\tMoodle",
-        "contents": "\\$OUTPUT->continue_button(new moodle_url('http://domain.com/index.php', array('id' => 2, 'userid' => 4)))"
+        "contents": "\\$OUTPUT->continue_button(${1:new moodle_url('http:\/\/domain.com\/index.php'}, ${2: array('id' => 2}, ${3: 'userid' => 4))})"
     }, {
         "trigger": "error_text\tMoodle",
-        "contents": "\\$OUTPUT->error_text('Its all broken!')"
+        "contents": "\\$OUTPUT->error_text(${1:'Its all broken!'})"
     }, {
         "trigger": "footer\tMoodle",
         "contents": "\\$OUTPUT->footer()"
@@ -692,76 +693,76 @@
         "contents": "\\$OUTPUT->header()"
     }, {
         "trigger": "heading\tMoodle",
-        "contents": "\\$OUTPUT->heading(get_string('help'), 3, 'helptitle', 'uniqueid')"
+        "contents": "\\$OUTPUT->heading(${1:get_string('help')}, ${2: 3}, ${3: 'helptitle'}, ${4: 'uniqueid'})"
     }, {
         "trigger": "heading_with_help\tMoodle",
-        "contents": "\\$OUTPUT->heading_with_help(\\$helpicon)"
+        "contents": "\\$OUTPUT->heading_with_help(${1:\\$helpicon})"
     }, {
         "trigger": "help_icon\tMoodle",
-        "contents": "\\$OUTPUT->help_icon(\\$helpicon)"
+        "contents": "\\$OUTPUT->help_icon(${1:\\$helpicon})"
     }, {
         "trigger": "textfield\tMoodle",
-        "contents": "\\$OUTPUT->textfield(\\$field)"
+        "contents": "\\$OUTPUT->textfield(${1:\\$field})"
     }, {
         "trigger": "paging_bar\tMoodle",
-        "contents": "\\$OUTPUT->paging_bar(\\$pagingbar)"
+        "contents": "\\$OUTPUT->paging_bar(${1:\\$pagingbar})"
     }, {
         "trigger": "user_picture\tMoodle",
-        "contents": "\\$OUTPUT->user_picture(\\$userpic)"
+        "contents": "\\$OUTPUT->user_picture(${1:\\$userpic})"
     }, {
         "trigger": "get_string\tMoodle",
-        "contents": "get_string('module_pluginlangfilename', 'plugintitle')"
+        "contents": "get_string(${1:'module_pluginlangfilename'}, ${2: 'plugintitle'})"
     }, {
         "trigger": "print_string\tMoodle",
-        "contents": "print_string('module_pluginlangfilename', 'plugintitle')"
+        "contents": "print_string(${1:'module_pluginlangfilename'}, ${2: 'plugintitle'})"
     }, {
         "trigger": "get_strings\tMoodle",
-        "contents": "get_strings(array('enable', 'disable', 'up', 'down', 'none'), 'qtype_dragdrop')"
+        "contents": "get_strings(${1:array('enable'}, ${2: 'disable'}, ${3: 'up'}, ${4: 'down'}, ${5: 'none')}, ${6: 'qtype_dragdrop'})"
     }, {
         "trigger": "asort\tMoodle",
         "contents": "asort()"
     }, {
         "trigger": "code2utf8\tMoodle",
-        "contents": "code2utf8(\\$string)"
+        "contents": "code2utf8(${1:\\$string})"
     }, {
         "trigger": "convert\tMoodle",
-        "contents": "convert(\\$string)"
+        "contents": "convert(${1:\\$string})"
     }, {
         "trigger": "encode_mimeheader\tMoodle",
-        "contents": "encode_mimeheader(\\$string)"
+        "contents": "encode_mimeheader(${1:\\$string})"
     }, {
         "trigger": "entities_to_utf8\tMoodle",
-        "contents": "entities_to_utf8(\\$string)"
+        "contents": "entities_to_utf8(${1:\\$string})"
     }, {
         "trigger": "specialtoascii\tMoodle",
-        "contents": "specialtoascii(\\$string)"
+        "contents": "specialtoascii(${1:\\$string})"
     }, {
         "trigger": "strlen\tMoodle",
-        "contents": "strlen(\\$string)"
+        "contents": "strlen(${1:\\$string})"
     }, {
         "trigger": "strpos\tMoodle",
-        "contents": "strpos(\\$string)"
+        "contents": "strpos(${1:\\$string})"
     }, {
         "trigger": "strrpos\tMoodle",
-        "contents": "strrpos(\\$string)"
+        "contents": "strrpos(${1:\\$string})"
     }, {
         "trigger": "strtolower\tMoodle",
-        "contents": "strtolower(\\$string)"
+        "contents": "strtolower(${1:\\$string})"
     }, {
         "trigger": "strtotitle\tMoodle",
-        "contents": "strtotitle(\\$string)"
+        "contents": "strtotitle(${1:\\$string})"
     }, {
         "trigger": "strtoupper\tMoodle",
-        "contents": "strtoupper(\\$string)"
+        "contents": "strtoupper(${1:\\$string})"
     }, {
         "trigger": "substr\tMoodle",
-        "contents": "substr(\\$string)"
+        "contents": "substr(${1:\\$string})"
     }, {
         "trigger": "trim_utf8_bom\tMoodle",
-        "contents": "trim_utf8_bom(\\$string)"
+        "contents": "trim_utf8_bom(${1:\\$string})"
     }, {
         "trigger": "utf8_to_entities\tMoodle",
-        "contents": "utf8_to_entities(\\$string)"
+        "contents": "utf8_to_entities(${1:\\$string})"
     }, {
         "trigger": "pluginversion\tMoodle",
         "contents": "\\$plugin->version"
@@ -773,13 +774,13 @@
         "contents": "\\$plugin->dependencies"
     }, {
         "trigger": "add\tMoodle",
-        "contents": "add(new admin_setting_FIELDTYPE('MYMOD/MYNAME', 'MYNAME', 'MYDESC', array('value' => '0', 'fix' => false), PARAM_INT))"
+        "contents": "add(${1:new admin_setting_FIELDTYPE('MYMOD\/MYNAME'}, ${2: 'MYNAME'}, ${3: 'MYDESC'}, ${4: array('value' => '0'}, ${5: 'fix' => false)}, ${6: PARAM_INT)})"
     }, {
         "trigger": "get_fast_modinfo\tMoodle",
-        "contents": "get_fast_modinfo(\\$course)"
+        "contents": "get_fast_modinfo(${1:\\$course})"
     }, {
         "trigger": "filter_user_list\tMoodle",
-        "contents": "filter_user_list(\\$users)"
+        "contents": "filter_user_list(${1:\\$users})"
     }, {
         "trigger": "define_my_steps\tMoodle",
         "contents": "define_my_steps()"
@@ -794,13 +795,13 @@
         "contents": "prepare_activity_structure()"
     }, {
         "trigger": "calendar_eventcreate\tMoodle",
-        "contents": "calendar_event::create(\\$properties)"
+        "contents": "calendar_event::create(${1:\\$properties})"
     }, {
         "trigger": "calendar_eventupdate\tMoodle",
-        "contents": "calendar_event::update(\\$data, \\$checkcapability = true)"
+        "contents": "calendar_event::update(${1:\\$data}, ${2: \\$checkcapability = true})"
     }, {
         "trigger": "calendar_event_hook\tMoodle",
-        "contents": "calendar_event_hook(\\$action, array \\$args)"
+        "contents": "calendar_event_hook(${1:\\$action}, ${2: array \\$args})"
     }, {
         "trigger": "calendar_get_default_courses\tMoodle",
         "contents": "calendar_get_default_courses()"
@@ -812,187 +813,187 @@
         "contents": "calendar_get_starting_weekday()"
     }, {
         "trigger": "calendar_day_representation\tMoodle",
-        "contents": "calendar_day_representation(\\$tstamp, \\$now = false, \\$usecommonwords = true)"
+        "contents": "calendar_day_representation(${1:\\$tstamp}, ${2: \\$now = false}, ${3: \\$usecommonwords = true})"
     }, {
         "trigger": "calendar_time_representation\tMoodle",
-        "contents": "calendar_time_representation(\\$time)"
+        "contents": "calendar_time_representation(${1:\\$time})"
     }, {
         "trigger": "calendar_wday_name\tMoodle",
-        "contents": "calendar_wday_name(\\$englishname)"
+        "contents": "calendar_wday_name(${1:\\$englishname})"
     }, {
         "trigger": "calendar_days_in_month\tMoodle",
-        "contents": "calendar_days_in_month(\\$month, \\$year)"
+        "contents": "calendar_days_in_month(${1:\\$month}, ${2: \\$year})"
     }, {
         "trigger": "calendar_get_link_href\tMoodle",
-        "contents": "calendar_get_link_href(\\$linkbase, \\$d, \\$m, \\$y)"
+        "contents": "calendar_get_link_href(${1:\\$linkbase}, ${2: \\$d}, ${3: \\$m}, ${4: \\$y})"
     }, {
         "trigger": "calendar_get_mini\tMoodle",
-        "contents": "calendar_get_mini(\\$courses, \\$groups, \\$users, \\$cal_month = false, \\$cal_year = false)"
+        "contents": "calendar_get_mini(${1:\\$courses}, ${2: \\$groups}, ${3: \\$users}, ${4: \\$cal_month = false}, ${5: \\$cal_year = false})"
     }, {
         "trigger": "calendar_get_popup\tMoodle",
-        "contents": "calendar_get_popup(\\$is_today, \\$event_timestart, \\$popupcontent = '') "
+        "contents": "calendar_get_popup(${1:\\$is_today}, ${2: \\$event_timestart}, ${3: \\$popupcontent = ''}) "
     }, {
         "trigger": "calendar_add_month\tMoodle",
-        "contents": "calendar_add_month(\\$month, \\$year)"
+        "contents": "calendar_add_month(${1:\\$month}, ${2: \\$year})"
     }, {
         "trigger": "calendar_sub_month\tMoodle",
-        "contents": "calendar_sub_month(\\$month, \\$year)"
+        "contents": "calendar_sub_month(${1:\\$month}, ${2: \\$year})"
     }, {
         "trigger": "calendar_get_module_cached\tMoodle",
-        "contents": "calendar_get_module_cached(&\\$coursecache, \\$modulename, \\$instance) "
+        "contents": "calendar_get_module_cached(${1:&\\$coursecache}, ${2: \\$modulename}, ${3: \\$instance}) "
     }, {
         "trigger": "calendar_get_course_cached\tMoodle",
-        "contents": "calendar_get_course_cached(&\\$coursecache, \\$courseid)"
+        "contents": "calendar_get_course_cached(${1:&\\$coursecache}, ${2: \\$courseid})"
     }, {
         "trigger": "calendar_print_month_selector\tMoodle",
-        "contents": "calendar_print_month_selector(\\$name, \\$selected)"
+        "contents": "calendar_print_month_selector(${1:\\$name}, ${2: \\$selected})"
     }, {
         "trigger": "calendar_top_controls\tMoodle",
-        "contents": "calendar_top_controls(\\$type, \\$data)"
+        "contents": "calendar_top_controls(${1:\\$type}, ${2: \\$data})"
     }, {
         "trigger": "calendar_filter_controls\tMoodle",
-        "contents": "calendar_filter_controls(moodle_url \\$returnurl)"
+        "contents": "calendar_filter_controls(${1:moodle_url \\$returnurl})"
     }, {
         "trigger": "calendar_preferences_button\tMoodle",
-        "contents": "calendar_preferences_button(stdClass \\$course)"
+        "contents": "calendar_preferences_button(${1:stdClass \\$course})"
     }, {
         "trigger": "calendar_set_filters\tMoodle",
-        "contents": "calendar_set_filters(array \\$courseeventsfrom, \\$ignorefilters = false)"
+        "contents": "calendar_set_filters(${1:array \\$courseeventsfrom}, ${2: \\$ignorefilters = false})"
     }, {
         "trigger": "calendar_get_link_previous\tMoodle",
-        "contents": "calendar_get_link_previous(\\$text, \\$linkbase, \\$d, \\$m, \\$y, \\$accesshide = false)"
+        "contents": "calendar_get_link_previous(${1:\\$text}, ${2: \\$linkbase}, ${3: \\$d}, ${4: \\$m}, ${5: \\$y}, ${6: \\$accesshide = false})"
     }, {
         "trigger": "calendar_get_link_next\tMoodle",
-        "contents": "calendar_get_link_next(\\$text, \\$linkbase, \\$d, \\$m, \\$y, \\$accesshide = false)"
+        "contents": "calendar_get_link_next(${1:\\$text}, ${2: \\$linkbase}, ${3: \\$d}, ${4: \\$m}, ${5: \\$y}, ${6: \\$accesshide = false})"
     }, {
         "trigger": "calendar_get_allowed_types\tMoodle",
-        "contents": "calendar_get_allowed_types(&\\$allowed, \\$course = null)"
+        "contents": "calendar_get_allowed_types(${1:&\\$allowed}, ${2: \\$course = null})"
     }, {
         "trigger": "calendar_add_event_allowed\tMoodle",
-        "contents": "calendar_add_event_allowed(\\$event) "
+        "contents": "calendar_add_event_allowed(${1:\\$event}) "
     }, {
         "trigger": "calendar_edit_event_allowed\tMoodle",
-        "contents": "calendar_edit_event_allowed(\\$event)"
+        "contents": "calendar_edit_event_allowed(${1:\\$event})"
     }, {
         "trigger": "calendar_user_can_add_event\tMoodle",
-        "contents": "calendar_user_can_add_event(\\$course)"
+        "contents": "calendar_user_can_add_event(${1:\\$course})"
     }, {
         "trigger": "calendar_show_event_type\tMoodle",
-        "contents": "calendar_show_event_type(\\$type, \\$user = null)"
+        "contents": "calendar_show_event_type(${1:\\$type}, ${2: \\$user = null})"
     }, {
         "trigger": "calendar_set_event_type_display\tMoodle",
-        "contents": "calendar_set_event_type_display(\\$type, \\$display = null, \\$user = null)"
+        "contents": "calendar_set_event_type_display(${1:\\$type}, ${2: \\$display = null}, ${3: \\$user = null})"
     }, {
         "trigger": "calendar_get_events\tMoodle",
-        "contents": "calendar_get_events(\\$tstart, \\$tend, \\$users, \\$groups, \\$courses, \\$withduration = true, \\$ignorehidden = true)"
+        "contents": "calendar_get_events(${1:\\$tstart}, ${2: \\$tend}, ${3: \\$users}, ${4: \\$groups}, ${5: \\$courses}, ${6: \\$withduration = true}, ${7: \\$ignorehidden = true})"
     }, {
         "trigger": "calendar_events_by_day\tMoodle",
-        "contents": "calendar_events_by_day(\\$events, \\$month, \\$year, &\\$eventsbyday, &\\$durationbyday, &\\$typesbyday, &\\$courses) "
+        "contents": "calendar_events_by_day(${1:\\$events}, ${2: \\$month}, ${3: \\$year}, ${4: &\\$eventsbyday}, ${5: &\\$durationbyday}, ${6: &\\$typesbyday}, ${7: &\\$courses}) "
     }, {
         "trigger": "calendar_get_upcoming\tMoodle",
-        "contents": "calendar_get_upcoming(\\$courses, \\$groups, \\$users, \\$daysinfuture, \\$maxevents, \\$fromtime = 0)"
+        "contents": "calendar_get_upcoming(${1:\\$courses}, ${2: \\$groups}, ${3: \\$users}, ${4: \\$daysinfuture}, ${5: \\$maxevents}, ${6: \\$fromtime = 0})"
     }, {
         "trigger": "calendar_get_block_upcoming\tMoodle",
-        "contents": "calendar_get_block_upcoming(\\$events, \\$linkhref = NULL)"
+        "contents": "calendar_get_block_upcoming(${1:\\$events}, ${2: \\$linkhref = NULL})"
     }, {
         "trigger": "calendar_format_event_time\tMoodle",
-        "contents": "calendar_format_event_time(\\$event, \\$now, \\$linkparams = null, \\$usecommonwords = true, \\$showtime = 0)"
+        "contents": "calendar_format_event_time(${1:\\$event}, ${2: \\$now}, ${3: \\$linkparams = null}, ${4: \\$usecommonwords = true}, ${5: \\$showtime = 0})"
     }, {
         "trigger": "calendar_add_event_metadata\tMoodle",
-        "contents": "calendar_add_event_metadata(\\$event)"
+        "contents": "calendar_add_event_metadata(${1:\\$event})"
     }, {
         "trigger": "table_exists\tMoodle",
-        "contents": "table_exists(\\$table)"
+        "contents": "table_exists(${1:\\$table})"
     }, {
         "trigger": "create_table\tMoodle",
-        "contents": "create_table(\\$table, \\$continue=true, \\$feedback=true)"
+        "contents": "create_table(${1:\\$table}, ${2: \\$continue=true}, ${3: \\$feedback=true})"
     }, {
         "trigger": "drop_table\tMoodle",
-        "contents": "drop_table(\\$table, \\$continue=true, \\$feedback=true)"
+        "contents": "drop_table(${1:\\$table}, ${2: \\$continue=true}, ${3: \\$feedback=true})"
     }, {
         "trigger": "rename_table\tMoodle",
-        "contents": "rename_table(\\$table, \\$newname, \\$continue=true, \\$feedback=true)"
+        "contents": "rename_table(${1:\\$table}, ${2: \\$newname}, ${3: \\$continue=true}, ${4: \\$feedback=true})"
     }, {
         "trigger": "field_exists\tMoodle",
-        "contents": "field_exists(\\$table, \\$field)"
+        "contents": "field_exists(${1:\\$table}, ${2: \\$field})"
     }, {
         "trigger": "add_field\tMoodle",
-        "contents": "add_field(\\$table, \\$field, \\$continue=true, \\$feedback=true)"
+        "contents": "add_field(${1:\\$table}, ${2: \\$field}, ${3: \\$continue=true}, ${4: \\$feedback=true})"
     }, {
         "trigger": "drop_field\tMoodle",
-        "contents": "drop_field(\\$table, \\$field, \\$continue=true, \\$feedback=true)"
+        "contents": "drop_field(${1:\\$table}, ${2: \\$field}, ${3: \\$continue=true}, ${4: \\$feedback=true})"
     }, {
         "trigger": "change_field_type\tMoodle",
-        "contents": "change_field_type(\\$table, \\$field, \\$continue=true, \\$feedback=true)"
+        "contents": "change_field_type(${1:\\$table}, ${2: \\$field}, ${3: \\$continue=true}, ${4: \\$feedback=true})"
     }, {
         "trigger": "change_field_precision\tMoodle",
-        "contents": "change_field_precision(\\$table, \\$field, \\$continue=true, \\$feedback=true)"
+        "contents": "change_field_precision(${1:\\$table}, ${2: \\$field}, ${3: \\$continue=true}, ${4: \\$feedback=true})"
     }, {
         "trigger": "change_field_unsigned\tMoodle",
-        "contents": "change_field_unsigned(\\$table, \\$field, \\$continue=true, \\$feedback=true)"
+        "contents": "change_field_unsigned(${1:\\$table}, ${2: \\$field}, ${3: \\$continue=true}, ${4: \\$feedback=true})"
     }, {
         "trigger": "change_field_notnull\tMoodle",
-        "contents": "change_field_notnull(\\$table, \\$field, \\$continue=true, \\$feedback=true)"
+        "contents": "change_field_notnull(${1:\\$table}, ${2: \\$field}, ${3: \\$continue=true}, ${4: \\$feedback=true})"
     }, {
         "trigger": "drop_enum_from_field\tMoodle",
-        "contents": "drop_enum_from_field(\\$table, \\$field, \\$continue=true, \\$feedback=true)"
+        "contents": "drop_enum_from_field(${1:\\$table}, ${2: \\$field}, ${3: \\$continue=true}, ${4: \\$feedback=true})"
     }, {
         "trigger": "change_field_default\tMoodle",
-        "contents": "change_field_default(\\$table, \\$field, \\$continue=true, \\$feedback=true)"
+        "contents": "change_field_default(${1:\\$table}, ${2: \\$field}, ${3: \\$continue=true}, ${4: \\$feedback=true})"
     }, {
         "trigger": "rename_field\tMoodle",
-        "contents": "rename_field(\\$table, \\$field, \\$newname, \\$continue=true, \\$feedback=true)"
+        "contents": "rename_field(${1:\\$table}, ${2: \\$field}, ${3: \\$newname}, ${4: \\$continue=true}, ${5: \\$feedback=true})"
     }, {
         "trigger": "index_exists\tMoodle",
-        "contents": "index_exists(\\$table, \\$index)"
+        "contents": "index_exists(${1:\\$table}, ${2: \\$index})"
     }, {
         "trigger": "find_index_name\tMoodle",
-        "contents": "find_index_name(\\$table, \\$index)"
+        "contents": "find_index_name(${1:\\$table}, ${2: \\$index})"
     }, {
         "trigger": "add_index\tMoodle",
-        "contents": "add_index(\\$table, \\$index, \\$continue=true, \\$feedback=true)"
+        "contents": "add_index(${1:\\$table}, ${2: \\$index}, ${3: \\$continue=true}, ${4: \\$feedback=true})"
     }, {
         "trigger": "drop_index\tMoodle",
-        "contents": "drop_index(\\$table, \\$index, \\$continue=true, \\$feedback=true)"
+        "contents": "drop_index(${1:\\$table}, ${2: \\$index}, ${3: \\$continue=true}, ${4: \\$feedback=true})"
     }, {
         "trigger": "is_enrolled\tMoodle",
-        "contents": "is_enrolled(context \\$context, \\$user = null, \\$withcapability = '', \\$onlyactive = false)"
+        "contents": "is_enrolled(${1:context \\$context}, ${2: \\$user = null}, ${3: \\$withcapability = ''}, ${4: \\$onlyactive = false})"
     }, {
         "trigger": "get_enrolled_sql\tMoodle",
-        "contents": "get_enrolled_sql(context \\$context, \\$withcapability = '', \\$groupid = 0, \\$onlyactive = false)"
+        "contents": "get_enrolled_sql(${1:context \\$context}, ${2: \\$withcapability = ''}, ${3: \\$groupid = 0}, ${4: \\$onlyactive = false})"
     }, {
         "trigger": "get_enrolled_users\tMoodle",
-        "contents": "get_enrolled_users(context \\$context, \\$withcapability = '', \\$groupid = 0, \\$userfields = 'u.*', \\$orderby = '', \\$limitfrom = 0, \\$limitnum = 0)"
+        "contents": "get_enrolled_users(${1:context \\$context}, ${2: \\$withcapability = ''}, ${3: \\$groupid = 0}, ${4: \\$userfields = 'u.*'}, ${5: \\$orderby = ''}, ${6: \\$limitfrom = 0}, ${7: \\$limitnum = 0})"
     }, {
         "trigger": "count_enrolled_users\tMoodle",
-        "contents": "count_enrolled_users(context \\$context, \\$withcapability = '', \\$groupid = 0)"
+        "contents": "count_enrolled_users(${1:context \\$context}, ${2: \\$withcapability = ''}, ${3: \\$groupid = 0})"
     }, {
         "trigger": "events_trigger\tMoodle",
-        "contents": "events_trigger('user_enrolled', \\$ue)"
+        "contents": "events_trigger(${1:'user_enrolled'}, ${2: \\$ue})"
     }, {
         "trigger": "handlers\tMoodle",
-        "contents": "\\$handlers = array ( 'user_enrolled' => array ('handlerfile' => '/mod/MYMOD/lib.php', 'handlerfunction'  => 'MYMODFUNCTION', 'schedule'         => 'instant', 'internal' => 1,))"
+        "contents": "\\$handlers = array (${1: 'user_enrolled' => array ('handlerfile' => '\/mod\/MYMOD\/lib.php'}, ${2: 'handlerfunction' => 'MYMODFUNCTION'}, ${3: 'schedule' => 'instant'}, ${4: 'internal' => 1}, ${5:)})"
     }, {
         "trigger": "messageproviders\tMoodle",
-        "contents": "\\$messageproviders = array ('MYPROVIDER' => array ())"
+        "contents": "\\$messageproviders = array (${1:'MYPROVIDER' => array ()})"
     }, {
         "trigger": "message_send\tMoodle",
-        "contents": "message_send(\\$eventdata)"
+        "contents": "message_send(${1:\\$eventdata})"
     }, {
         "trigger": "get_renderer\tMoodle",
-        "contents": "\\$PAGE->get_renderer('core', 'media')"
+        "contents": "\\$PAGE->get_renderer(${1:'core'}, ${2: 'media'})"
     }, {
         "trigger": "get_user_preferences\tMoodle",
-        "contents": "get_user_preferences(\\$name = null, \\$default = null, \\$user = null)"
+        "contents": "get_user_preferences(${1:\\$name = null}, ${2: \\$default = null}, ${3: \\$user = null})"
     }, {
         "trigger": "set_user_preference\tMoodle",
-        "contents": "set_user_preference(\\$name, \\$value, \\$user = null)"
+        "contents": "set_user_preference(${1:\\$name}, ${2: \\$value}, ${3: \\$user = null})"
     }, {
         "trigger": "set_user_preferences\tMoodle",
-        "contents": "set_user_preferences(array \\$prefarray, \\$user = null)"
+        "contents": "set_user_preferences(${1:array \\$prefarray}, ${2: \\$user = null})"
     }, {
         "trigger": "unset_user_preference\tMoodle",
-        "contents": "unset_user_preference(\\$name, \\$user = null)"
+        "contents": "unset_user_preference(${1:\\$name}, ${2: \\$user = null})"
     }, {
         "trigger": "get_ratings\tMoodle",
         "contents": "get_ratings()"
@@ -1004,16 +1005,16 @@
         "contents": "delete_ratings()"
     }, {
         "trigger": "tag_set\tMoodle",
-        "contents": "tag_set('user', \\$userId, array())"
+        "contents": "tag_set(${1:'user'}, ${2: \\$userId}, ${3: array()})"
     }, {
         "trigger": "tag_get_tags\tMoodle",
-        "contents": "tag_get_tags('user', \\$userId)"
+        "contents": "tag_get_tags(${1:'user'}, ${2: \\$userId})"
     }, {
         "trigger": "tag_set_add\tMoodle",
-        "contents": "tag_set_add('user', \\$userId, 'chess')"
+        "contents": "tag_set_add(${1:'user'}, ${2: \\$userId}, ${3: 'chess'})"
     }, {
         "trigger": "tag_set_delete\tMoodle",
-        "contents": "tag_set_delete('user', \\$userId, 'chess')"
+        "contents": "tag_set_delete(${1:'user'}, ${2: \\$userId}, ${3: 'chess'})"
     }, {
         "trigger": "tag_description_set\tMoodle",
         "contents": "tag_description_set(\\$firstTagKey, '<p>TEXT</p>', FORMAT_HTML)"
@@ -1022,10 +1023,10 @@
         "contents": "tag_print_cloud()"
     }, {
         "trigger": "usergetdate\tMoodle",
-        "contents": "usergetdate(time())"
+        "contents": "usergetdate(${1:time()})"
     }, {
         "trigger": "userdate\tMoodle",
-        "contents": "userdate(make_timestamp(\\$y, \\$m), 'Current user time')"
+        "contents": "userdate(${1:make_timestamp(\\$y}, ${2: \\$m)}, ${3: 'Current user time'})"
     }, {
         "trigger": "make_timestamp\tMoodle",
         "contents": "make_timestamp()"
@@ -1064,10 +1065,10 @@
         "contents": "dayofweek()"
     }, {
         "trigger": "set_module_viewed\tMoodle",
-        "contents": "set_module_viewed(\\$cm)"
+        "contents": "set_module_viewed(${1:\\$cm})"
     }, {
         "trigger": "optional_param\tMoodle",
-        "contents": "optional_param('itemnumber', 0, PARAM_INT)"
+        "contents": "optional_param(${1:'itemnumber'}, ${2: 0}, ${3: PARAM_INT})"
     }, {
         "trigger": "dbtype\tMoodle",
         "contents": "\\$CFG->dbtype"
