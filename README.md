@@ -33,7 +33,7 @@ Clone directly into your Sublime Text `Packages` directory.  *Locate your
 
 ### [Manual](https://github.com/daletsin/MoodleCompletions/releases)
 
-1. [Download a release](https://github.com/daletsin/MoodleCompletions)
+1. [Download a release](https://github.com/daletsin/MoodleCompletions/releases)
 2. Unzip and copy it to your Sublime Text `Packages` directory.  *Locate your
 `Packages` directory by using the menu item
 `Preferences -> Browse Packages...`.*
