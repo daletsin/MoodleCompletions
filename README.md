@@ -18,7 +18,7 @@ Usage
 Installation
 ------------
 
-### [Package Control](https://sublime.wbond.net/installation)
+### [Package Control](https://sublime.wbond.net/installation)(soon)
 
 1. Open Package Control: `Preferences -> Package Control`
 2. Select `Package Control: Install Package`
@@ -31,7 +31,7 @@ Clone directly into your Sublime Text `Packages` directory.  *Locate your
 `Packages` directory by using the menu item
 `Preferences -> Browse Packages...`.*
 
-### [Manual](http://www.sublimetext.com/docs/3/packages.html)
+### [Manual](https://github.com/daletsin/MoodleCompletions/releases)
 
 1. [Download a release](https://github.com/daletsin/MoodleCompletions)
 2. Unzip and copy it to your Sublime Text `Packages` directory.  *Locate your
