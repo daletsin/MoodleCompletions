@@ -1,0 +1,1111 @@
+{
+    "scope": "source.php",
+    "completions": [{
+        "trigger": "capabilities\tMoodle",
+        "contents": "\\$capabilities = array('${1:mod}/${2:MYPLUGIN}:${3:MYCAPABILITY}' => array('riskbitmask' => RISK_SPAM, 'captype' => 'write', 'contextlevel' =>CONTEXT_MODULE, 'archetypes' => array('editingteacher' => CAP_ALLOW)))"
+    }, {
+        "trigger": "context_system\tMoodle",
+        "contents": "context_system::instance()"
+    }, {
+        "trigger": "context_user\tMoodle",
+        "contents": "context_user::instance(${1:\\$user->id})"
+    }, {
+        "trigger": "context_coursecat\tMoodle",
+        "contents": "context_coursecat::instance(${1:\\$category->id})"
+    }, {
+        "trigger": "context_course\tMoodle",
+        "contents": "context_course::instance(${1:\\$course->id})"
+    }, {
+        "trigger": "context_module\tMoodle",
+        "contents": "context_module::instance(${1:\\$cm->id})"
+    }, {
+        "trigger": "context\tMoodle",
+        "contents": "context::instance_by_id(${1:\\$contextid})"
+    }, {
+        "trigger": "get_context_instance\tMoodle",
+        "contents": "get_context_instance(${1:\\$contextlevel}, ${2:\\$instance = 0}, ${3:\\$strictness = IGNORE_MISSING})"
+    }, {
+        "trigger": "get_context_instance_by_id\tMoodle",
+        "contents": "get_context_instance_by_id(\\$id, \\$strictness = IGNORE_MISSING)"
+    }, {
+        "trigger": "has_capability\tMoodle",
+        "contents": "has_capability(\\$capability, context \\$context, \\$user = null, \\$doanything = true)"
+    }, {
+        "trigger": "require_capability\tMoodle",
+        "contents": "require_capability(\\$capability, context \\$context, \\$userid = null, \\$doanything = true, \\$errormessage = 'nopermissions', \\$stringfile = '')"
+    }, {
+        "trigger": "require_login\tMoodle",
+        "contents": "require_login(\\$courseorid = NULL, \\$autologinguest = true, \\$cm = NULL, \\$setwantsurltome = true, \\$preventredirect = false)"
+    }, {
+        "trigger": "require_course_login\tMoodle",
+        "contents": "require_course_login(\\$courseorid, \\$autologinguest = true, \\$cm = NULL, \\$setwantsurltome = true, \\$preventredirect = false)"
+    }, {
+        "trigger": "get_users_by_capability\tMoodle",
+        "contents": "get_users_by_capability(context \\$context, \\$capability, \\$fields = '', \\$sort = '', \\$limitfrom = '', \\$limitnum = '', \\$groups = '', \\$exceptions = '', \\$doanything_ignored = null, \\$view_ignored = null, \\$useviewallgroups = false)"
+    }, {
+        "trigger": "isguestuser\tMoodle",
+        "contents": "isguestuser(\\$user = null)"
+    }, {
+        "trigger": "isloggedin\tMoodle",
+        "contents": "isloggedin()"
+    }, {
+        "trigger": "is_siteadmin\tMoodle",
+        "contents": "is_siteadmin(\\$user_or_id = null)"
+    }, {
+        "trigger": "is_guest\tMoodle",
+        "contents": "is_guest(context \\$context, \\$user = null)"
+    }, {
+        "trigger": "is_viewing\tMoodle",
+        "contents": "is_viewing(context \\$context, \\$user = null, \\$withcapability = '')"
+    }, {
+        "trigger": "get_manager\tMoodle",
+        "contents": "\\$DB->get_manager()"
+    }, {
+        "trigger": "get_record\tMoodle",
+        "contents": "\\$DB->get_record(\\$table, array \\$conditions, \\$fields='*', \\$strictness=IGNORE_MISSING)"
+    }, {
+        "trigger": "get_record_select\tMoodle",
+        "contents": "\\$DB->get_record_select(\\$table, \\$select, array \\$params=null, \\$fields='*', \\$strictness=IGNORE_MISSING)"
+    }, {
+        "trigger": "get_record_sql\tMoodle",
+        "contents": "\\$DB->get_record_sql(\\$sql, array \\$params=null, \\$strictness=IGNORE_MISSING)"
+    }, {
+        "trigger": "get_records\tMoodle",
+        "contents": "\\$DB->get_records(\\$table, array \\$conditions=null, \\$sort='', \\$fields='*', \\$limitfrom=0, \\$limitnum=0)"
+    }, {
+        "trigger": "get_records_select\tMoodle",
+        "contents": "\\$DB->get_records_select(\\$table, \\$select, array \\$params=null, \\$sort='', \\$fields='*', \\$limitfrom=0, \\$limitnum=0)"
+    }, {
+        "trigger": "get_records_sql\tMoodle",
+        "contents": "\\$DB->get_records_sql(\\$sql, array \\$params=null, \\$limitfrom=0, \\$limitnum=0)"
+    }, {
+        "trigger": "get_records_list\tMoodle",
+        "contents": "\\$DB->get_records_list(\\$table, \\$field, array \\$values, \\$sort='', \\$fields='*', \\$limitfrom='', \\$limitnum='')"
+    }, {
+        "trigger": "get_records_menu\tMoodle",
+        "contents": "\\$DB->get_records_menu(\\$table, array \\$conditions=null, \\$sort='', \\$fields='*', \\$limitfrom=0, \\$limitnum=0)"
+    }, {
+        "trigger": "get_records_select_menu\tMoodle",
+        "contents": "\\$DB->get_records_select_menu(\\$table, \\$select, array \\$params=null, \\$sort='', \\$fields='*', \\$limitfrom=0, \\$limitnum=0)"
+    }, {
+        "trigger": "get_records_sql_menu\tMoodle",
+        "contents": "\\$DB->get_records_sql_menu(\\$sql, array \\$params=null, \\$limitfrom=0, \\$limitnum=0)"
+    }, {
+        "trigger": "count_records\tMoodle",
+        "contents": "\\$DB->count_records(\\$table, array \\$conditions=null) "
+    }, {
+        "trigger": "count_records_select\tMoodle",
+        "contents": "\\$DB->count_records_select(\\$table, \\$select, array \\$params=null, \\$countitem='COUNT(x)')"
+    }, {
+        "trigger": "count_records_sql\tMoodle",
+        "contents": "\\$DB->count_records_sql(\\$sql, array \\$params=null) "
+    }, {
+        "trigger": "record_exists\tMoodle",
+        "contents": "\\$DB->record_exists(\\$table, array \\$conditions=null)"
+    }, {
+        "trigger": "record_exists_select\tMoodle",
+        "contents": "\\$DB->record_exists_select(\\$table, \\$select, array \\$params=null)"
+    }, {
+        "trigger": "record_exists_sql\tMoodle",
+        "contents": "\\$DB->record_exists_sql(\\$sql, array \\$params=null)"
+    }, {
+        "trigger": "get_field\tMoodle",
+        "contents": "\\$DB->get_field(\\$table, \\$return, array \\$conditions, \\$strictness=IGNORE_MISSING)"
+    }, {
+        "trigger": "get_field_select\tMoodle",
+        "contents": "\\$DB->get_field_select(\\$table, \\$return, \\$select, array \\$params=null, \\$strictness=IGNORE_MISSING)"
+    }, {
+        "trigger": "get_field_sql\tMoodle",
+        "contents": "\\$DB->get_field_sql(\\$sql, array \\$params=null, \\$strictness=IGNORE_MISSING)"
+    }, {
+        "trigger": "get_fieldset_select\tMoodle",
+        "contents": "\\$DB->get_fieldset_select(\\$table, \\$return, \\$select, array \\$params=null)"
+    }, {
+        "trigger": "get_fieldset_sql\tMoodle",
+        "contents": "\\$DB->get_fieldset_sql(\\$sql, array \\$params=null)"
+    }, {
+        "trigger": "set_field\tMoodle",
+        "contents": "\\$DB->set_field(\\$table, \\$newfield, \\$newvalue, array \\$conditions=null)"
+    }, {
+        "trigger": "set_field_select\tMoodle",
+        "contents": "\\$DB->set_field_select(\\$table, \\$newfield, \\$newvalue, \\$select, array \\$params=null)"
+    }, {
+        "trigger": "delete_records\tMoodle",
+        "contents": "\\$DB->delete_records(\\$table, array \\$conditions=null)"
+    }, {
+        "trigger": "delete_records_select\tMoodle",
+        "contents": "\\$DB->delete_records_select(\\$table, \\$select, array \\$params=null)"
+    }, {
+        "trigger": "insert_record\tMoodle",
+        "contents": "\\$DB->insert_record(\\$table, \\$dataobject, \\$returnid=true, \\$bulk=false)"
+    }, {
+        "trigger": "update_record\tMoodle",
+        "contents": "\\$DB->update_record(\\$table, \\$dataobject, \\$bulk=false)"
+    }, {
+        "trigger": "execute\tMoodle",
+        "contents": "\\$DB->execute(\\$sql, array \\$parms=null)"
+    }, {
+        "trigger": "get_recordset\tMoodle",
+        "contents": "\\$DB->get_recordset(\\$table, array \\$conditions=null, \\$sort='', \\$fields='*', \\$limitfrom=0, \\$limitnum=0)"
+    }, {
+        "trigger": "get_recordset_select\tMoodle",
+        "contents": "\\$DB->get_recordset_select(\\$table, \\$select, array \\$params=null, \\$sort='', \\$fields='*', \\$limitfrom=0, \\$limitnum=0)"
+    }, {
+        "trigger": "get_recordset_sql\tMoodle",
+        "contents": "\\$DB->get_recordset_sql(\\$sql, array \\$params=null, \\$limitfrom=0, \\$limitnum=0)"
+    }, {
+        "trigger": "get_recordset_list\tMoodle",
+        "contents": "\\$DB->get_recordset_list(\\$table, \\$field='', \\$values='', \\$sort='', \\$fields='*', \\$limitfrom='', \\$limitnum='')"
+    }, {
+        "trigger": "start_delegated_transaction\tMoodle",
+        "contents": "\\$DB->start_delegated_transaction()"
+    }, {
+        "trigger": "allow_commit\tMoodle",
+        "contents": "allow_commit()"
+    }, {
+        "trigger": "sql_bitand\tMoodle",
+        "contents": "\\$DB->sql_bitand(\\$int1, \\$int2)"
+    }, {
+        "trigger": "sql_bitnot\tMoodle",
+        "contents": "\\$DB->sql_bitnot(\\$int1)"
+    }, {
+        "trigger": "sql_bitor\tMoodle",
+        "contents": "\\$DB->sql_bitor(\\$int1, \\$int2)"
+    }, {
+        "trigger": "sql_bitxor\tMoodle",
+        "contents": "\\$DB->sql_bitxor(\\$int1, \\$int2)"
+    }, {
+        "trigger": "sql_null_from_clause\tMoodle",
+        "contents": "\\$DB->sql_null_from_clause()"
+    }, {
+        "trigger": "sql_ceil\tMoodle",
+        "contents": "\\$DB->sql_ceil(\\$fieldname)"
+    }, {
+        "trigger": "sql_like\tMoodle",
+        "contents": "\\$DB->sql_like(\\$fieldname, \\$param, \\$casesensitive = true, \\$accentsensitive = true, \\$notlike = false, \\$escapechar = ' \\ ')"
+    }, {
+        "trigger": "sql_length\tMoodle",
+        "contents": "\\$DB->sql_length(\\$fieldname)"
+    }, {
+        "trigger": "sql_modulo\tMoodle",
+        "contents": "\\$DB->sql_modulo(\\$int1, \\$int2)"
+    }, {
+        "trigger": "sql_position\tMoodle",
+        "contents": "\\$DB->sql_position(\\$needle, \\$haystack)"
+    }, {
+        "trigger": "sql_substr\tMoodle",
+        "contents": "\\$DB->sql_substr(\\$expr, \\$start, \\$length=false)"
+    }, {
+        "trigger": "sql_cast_char2int\tMoodle",
+        "contents": "\\$DB->sql_cast_char2int(\\$fieldname, \\$text=false)"
+    }, {
+        "trigger": "sql_cast_char2real\tMoodle",
+        "contents": "\\$DB->sql_cast_char2real(\\$fieldname, \\$text=false)"
+    }, {
+        "trigger": "sql_compare_text\tMoodle",
+        "contents": "\\$DB->sql_compare_text(\\$fieldname, \\$numchars=32)"
+    }, {
+        "trigger": "sql_order_by_text\tMoodle",
+        "contents": "\\$DB->sql_order_by_text(\\$fieldname, \\$numchars=32)"
+    }, {
+        "trigger": "sql_concat\tMoodle",
+        "contents": "\\$DB->sql_concat()"
+    }, {
+        "trigger": "sql_concat_join\tMoodle",
+        "contents": "\\$DB->sql_concat_join(\\$separator=' ', \\$elements=array())"
+    }, {
+        "trigger": "sql_fullname\tMoodle",
+        "contents": "\\$DB->sql_fullname(\\$first='firstname', \\$last='lastname')"
+    }, {
+        "trigger": "sql_isempty\tMoodle",
+        "contents": "\\$DB->sql_isempty(\\$tablename, \\$fieldname, \\$nullablefield, \\$textfield)"
+    }, {
+        "trigger": "sql_isnotempty\tMoodle",
+        "contents": "\\$DB->sql_isnotempty(\\$tablename, \\$fieldname, \\$nullablefield, \\$textfield)"
+    }, {
+        "trigger": "sql_empty\tMoodle",
+        "contents": "\\$DB->sql_empty()"
+    }, {
+        "trigger": "set_debug\tMoodle",
+        "contents": "\\$DB->set_debug(true)"
+    }, {
+        "trigger": "get_course\tMoodle",
+        "contents": "get_course(\\$courseid)"
+    }, {
+        "trigger": "get_file_content\tMoodle",
+        "contents": "get_file_content('userfile')"
+    }, {
+        "trigger": "get_new_filename\tMoodle",
+        "contents": "get_new_filename('userfile')"
+    }, {
+        "trigger": "save_file\tMoodle",
+        "contents": "save_file('userfile', \\$fullpath, \\$override)"
+    }, {
+        "trigger": "save_stored_file\tMoodle",
+        "contents": "save_stored_file('userfile', ...)"
+    }, {
+        "trigger": "file_get_submitted_draft_itemid\tMoodle",
+        "contents": "file_get_submitted_draft_itemid('entry')"
+    }, {
+        "trigger": "file_prepare_draft_area\tMoodle",
+        "contents": "file_prepare_draft_area(\\$draftid_editor, \\$context->id, 'mod_MYMOD', 'entry', \\$entry->id, array('subdirs'=>true), \\$entry->definition)"
+    }, {
+        "trigger": "file_save_draft_area_files\tMoodle",
+        "contents": "file_save_draft_area_files(\\$data->attachments, \\$context->id, 'mod_glossary', 'attachment', \\$entry->id, array('subdirs' => 0, 'maxbytes' => \\$maxbytes, 'maxfiles' => 50))"
+    }, {
+        "trigger": "file_rewrite_pluginfile_urls\tMoodle",
+        "contents": "file_rewrite_pluginfile_urls(\\$messagetext, 'pluginfile.php', \\$context->id, 'mod_mymodule', 'proper_file_area', \\$itemid)"
+    }, {
+        "trigger": "file_prepare_standard_editor\tMoodle",
+        "contents": "file_prepare_standard_editor(\\$data, 'textfield', \\$textfieldoptions, \\$context, 'mod_somemodule', 'somearea', \\$data->id)"
+    }, {
+        "trigger": "file_prepare_standard_filemanager\tMoodle",
+        "contents": "file_prepare_standard_filemanager(\\$entry, 'attachment', \\$attachmentoptions, \\$context, 'mod_mymod', 'attachment', \\$entry->id)"
+    }, {
+        "trigger": "file_postupdate_standard_filemanager\tMoodle",
+        "contents": "file_postupdate_standard_filemanager(\\$entry, 'attachment', \\$attachmentoptions, \\$context, 'mod_mymod', 'attachment', \\$entry->id)"
+    }, {
+        "trigger": "file_postupdate_standard_editor\tMoodle",
+        "contents": "file_postupdate_standard_editor(\\$data, 'textfield', \\$textfieldoptions, \\$context, 'mod_somemodule', 'somearea', \\$data->id)"
+    }, {
+        "trigger": "make_pluginfile_url\tMoodle",
+        "contents": "make_pluginfile_url(\\$file->get_contextid(), \\$file->get_component(), \\$file->get_filearea(), \\$file->get_itemid(), \\$file->get_filepath(), \\$file->get_filename())"
+    }, {
+        "trigger": "myPLUGIN_pluginfile\tMoodle",
+        "contents": "myPLUGIN_pluginfile(\\$course, \\$cm, \\$context, \\$filearea, \\$args, \\$forcedownload, array \\$options=array())"
+    }, {
+        "trigger": "get_file_storage\tMoodle",
+        "contents": "get_file_storage()"
+    }, {
+        "trigger": "get_file\tMoodle",
+        "contents": "get_file(\\$context->id, 'mod_MYPLUGIN', \\$filearea, \\$itemid, \\$filepath, \\$filename)"
+    }, {
+        "trigger": "send_file\tMoodle",
+        "contents": "send_file(\\$file, 86400, 0, \\$forcedownload, \\$options)"
+    }, {
+        "trigger": "get_file_browser\tMoodle",
+        "contents": "get_file_browser()"
+    }, {
+        "trigger": "get_system_context\tMoodle",
+        "contents": "get_system_context()"
+    }, {
+        "trigger": "get_file_info\tMoodle",
+        "contents": "get_file_info(\\$context, \\$component, \\$filearea, \\$itemid, '/', \\$filename)"
+    }, {
+        "trigger": "get_parent\tMoodle",
+        "contents": "get_parent()"
+    }, {
+        "trigger": "get_children\tMoodle",
+        "contents": "get_children()"
+    }, {
+        "trigger": "is_directory\tMoodle",
+        "contents": "is_directory()"
+    }, {
+        "trigger": "get_visible_name\tMoodle",
+        "contents": "get_visible_name()"
+    }, {
+        "trigger": "get_params\tMoodle",
+        "contents": "get_params()"
+    }, {
+        "trigger": "create_file_from_pathname\tMoodle",
+        "contents": "create_file_from_pathname(\\$file_record, \\$from_zip_file)"
+    }, {
+        "trigger": "get_area_files\tMoodle",
+        "contents": "get_area_files(\\$contextid, 'mod_MYMOD', 'AREA', \\$submission->id)"
+    }, {
+        "trigger": "get_filename\tMoodle",
+        "contents": "get_filename()"
+    }, {
+        "trigger": "get_itemid\tMoodle",
+        "contents": "get_itemid()"
+    }, {
+        "trigger": "get_filepath\tMoodle",
+        "contents": "get_filepath()"
+    }, {
+        "trigger": "get_component\tMoodle",
+        "contents": "get_component()"
+    }, {
+        "trigger": "get_contextid\tMoodle",
+        "contents": "get_contextid()"
+    }, {
+        "trigger": "get_filearea\tMoodle",
+        "contents": "get_filearea()"
+    }, {
+        "trigger": "fileinfo\tMoodle",
+        "contents": "\\$fileinfo = array('contextid' => \\$context->id, 'component' => 'mod_MYMOD', 'filearea' => 'myarea', 'itemid' => 0, 'filepath' => '/', 'filename' => 'myfile.txt')"
+    }, {
+        "trigger": "create_file_from_string\tMoodle",
+        "contents": "create_file_from_string(\\$fileinfo, 'hello world')"
+    }, {
+        "trigger": "get_content\tMoodle",
+        "contents": "get_content()"
+    }, {
+        "trigger": "delete\tMoodle",
+        "contents": "delete()"
+    }, {
+        "trigger": "addElementbutton\tMoodle",
+        "contents": "addElement('button', 'intro', get_string('buttonlabel'))"
+    }, {
+        "trigger": "addElementcheckbox\tMoodle",
+        "contents": "addElement('checkbox', 'ratingtime', get_string('ratingtime', 'forum'))"
+    }, {
+        "trigger": "addElementadvcheckbox\tMoodle",
+        "contents": "addElement('advcheckbox', 'ratingtime', get_string('ratingtime', 'forum'), 'Label displayed after checkbox', array('group' => 1), array(0, 1))"
+    }, {
+        "trigger": "addElementchoosecoursefile\tMoodle",
+        "contents": "addElement('choosecoursefile', 'mediafile', get_string('mediafile', 'lesson'), array('courseid'=>\\$COURSE->id))"
+    }, {
+        "trigger": "addGroupRule\tMoodle",
+        "contents": "addGroupRule('elementname', array('value' => array(array(list, of, rule, params, but, fieldname))))"
+    }, {
+        "trigger": "addElementdate_time_selector\tMoodle",
+        "contents": "addElement('date_time_selector', 'assesstimestart', get_string('from'))"
+    }, {
+        "trigger": "createElement\tMoodle",
+        "contents": "createElement('radio', 'yesno', '', get_string('yes'), 1, \\$attributes)"
+    }, {
+        "trigger": "setDefault\tMoodle",
+        "contents": "setDefault('yesno', 0)"
+    }, {
+        "trigger": "addElementselect\tMoodle",
+        "contents": "addElement('select', 'type', get_string('forumtype', 'forum'), \\$FORUM_TYPES, \\$attributes)"
+    }, {
+        "trigger": "setMultiple\tMoodle",
+        "contents": "setMultiple(true)"
+    }, {
+        "trigger": "addElementpassword\tMoodle",
+        "contents": "addElement('password', 'password', get_string('label'), \\$attributes)"
+    }, {
+        "trigger": "addElementhidden\tMoodle",
+        "contents": "addElement('hidden', 'reply', 'yes')"
+    }, {
+        "trigger": "addElementhtml\tMoodle",
+        "contents": "addElement('html', '<div class=qheader>')"
+    }, {
+        "trigger": "addElementmodgrade\tMoodle",
+        "contents": "addElement('modgrade', 'scale', get_string('grade'), false)"
+    }, {
+        "trigger": "addElementstatic\tMoodle",
+        "contents": "addElement('static', 'description', get_string('description', 'exercise'),get_string('descriptionofexercise', 'exercise', \\$COURSE->students))"
+    }, {
+        "trigger": "addElementtext\tMoodle",
+        "contents": "addElement('text', 'name', get_string('forumname', 'forum'), \\$attributes)"
+    }, {
+        "trigger": "addElementtextarea\tMoodle",
+        "contents": "addElement('textarea', 'introduction', get_string('introtext', 'survey'), 'wrap=virtual rows=20 cols=50')"
+    }, {
+        "trigger": "addElementrecaptcha\tMoodle",
+        "contents": "addElement('recaptcha', 'recaptcha_field_name', \\$attributes)"
+    }, {
+        "trigger": "addElementpasswordunmask\tMoodle",
+        "contents": "addElement('passwordunmask', 'password', get_string('label'), \\$attributes)"
+    }, {
+        "trigger": "addElementselectyesno\tMoodle",
+        "contents": "addElement('selectyesno', 'maxbytes', get_string('maxattachmentsize', 'forum'))"
+    }, {
+        "trigger": "addElementselectwithlink\tMoodle",
+        "contents": "addElement('selectwithlink', 'scaleid', get_string('scale'), \\$options, null, array('link' => URL, 'label' => get_string('scalescustomcreate')))"
+    }, {
+        "trigger": "addElementdate_selector\tMoodle",
+        "contents": "addElement('date_selector', 'assesstimefinish', get_string('to'))"
+    }, {
+        "trigger": "addElementduration\tMoodle",
+        "contents": "addElement('duration', 'timelimit', get_string('timelimit', 'quiz'))"
+    }, {
+        "trigger": "addElementeditor\tMoodle",
+        "contents": "addElement('editor', 'fieldname', get_string('labeltext', 'langfile'))"
+    }, {
+        "trigger": "addElementfilepicker\tMoodle",
+        "contents": "addElement('filepicker', 'userfile', get_string('file'), null, array('maxbytes' => \\$maxbytes, 'accepted_types' => '*'))"
+    }, {
+        "trigger": "addElementfilemanager\tMoodle",
+        "contents": "addElement('filemanager', 'attachments', get_string('attachment', 'moodle'), null,array('subdirs' => 0, 'maxbytes' => \\$maxbytes, 'maxfiles' => 50, 'accepted_types' => array('document') ))"
+    }, {
+        "trigger": "addElementtags\tMoodle",
+        "contents": "addElement('tags', 'field_name', \\$lable, \\$options, \\$attributes)"
+    }, {
+        "trigger": "addGroup\tMoodle",
+        "contents": "addGroup(\\$buttonarray, 'buttonar', '', array(' '), false)"
+    }, {
+        "trigger": "addElementmodvisible\tMoodle",
+        "contents": "addElement('modvisible', 'visible', get_string('visible'))"
+    }, {
+        "trigger": "addElementgrading\tMoodle",
+        "contents": "addElement('grading', 'advancedgrading', get_string('grade').':', array('gradinginstance' => \\$gradinginstance))"
+    }, {
+        "trigger": "addElementquestioncategory\tMoodle",
+        "contents": "addElement('questioncategory', 'category', get_string('category', 'question'), array('contexts'=>\\$contexts, 'top'=>true, 'currentcat'=>\\$currentcat, 'nochildrenof'=>\\$currentcat))"
+    }, {
+        "trigger": "disabledIf\tMoodle",
+        "contents": "disabledIf('mycontrol', 'someselect', 'neq', 42)"
+    }, {
+        "trigger": "addRule\tMoodle",
+        "contents": "addRule('elementname', get_string('error'), 'rule type', 'extraruledata', 'server'(default), false, false)"
+    }, {
+        "trigger": "setHelpButton\tMoodle",
+        "contents": "setHelpButton('lessondefault', array('lessondefault', get_string('lessondefault', 'lesson'), 'lesson'))"
+    }, {
+        "trigger": "addHelpButton\tMoodle",
+        "contents": "addHelpButton('api_key_field', 'api_key', 'block_extsearch')"
+    }, {
+        "trigger": "disable_form_change_checker\tMoodle",
+        "contents": "disable_form_change_checker()"
+    }, {
+        "trigger": "setType\tMoodle",
+        "contents": "setType()"
+    }, {
+        "trigger": "add_to_log\tMoodle",
+        "contents": "add_to_log(\\$courseid, \\$module, \\$action, \\$url='', \\$info='', \\$cm=0, \\$user=0)"
+    }, {
+        "trigger": "user_accesstime_log\tMoodle",
+        "contents": "user_accesstime_log(\\$courseid=0)"
+    }, {
+        "trigger": "get_logs\tMoodle",
+        "contents": "get_logs(\\$select, array \\$params=null, \\$order='l.time DESC', \\$limitfrom='', \\$limitnum='', &\\$totalcount)"
+    }, {
+        "trigger": "get_logs_usercourse\tMoodle",
+        "contents": "get_logs_usercourse(\\$userid, \\$courseid, \\$coursestart)"
+    }, {
+        "trigger": "get_logs_userday\tMoodle",
+        "contents": "get_logs_userday(\\$userid, \\$courseid, \\$daystart)"
+    }, {
+        "trigger": "ignore_active\tMoodle",
+        "contents": "\\$PAGE->navbar->ignore_active()"
+    }, {
+        "trigger": "navbaradd\tMoodle",
+        "contents": "\\$PAGE->navbar->add(get_string('name of thing'), new moodle_url('/a/link/if/you/want/one.php'))"
+    }, {
+        "trigger": "make_active\tMoodle",
+        "contents": "make_active()"
+    }, {
+        "trigger": "settingsnavadd\tMoodle",
+        "contents": "\\$PAGE->settingsnav->add(get_string('setting'), new moodle_url('/a/link/if/you/want/one.php'), navigation_node::TYPE_CONTAINER)"
+    }, {
+        "trigger": "navigation\tMoodle",
+        "contents": "\\$PAGE->navigation->find(\\$courseid, navigation_node::TYPE_COURSE)"
+    }, {
+        "trigger": "set_url\tMoodle",
+        "contents": "\\$PAGE->set_url(new moodle_url('/page/to/your/file.php', array('key' => 'value', 'id' => 3)))"
+    }, {
+        "trigger": "pagecontext\tMoodle",
+        "contents": "\\$PAGE->context"
+    }, {
+        "trigger": "course\tMoodle",
+        "contents": "\\$PAGE->course"
+    }, {
+        "trigger": "cm\tMoodle",
+        "contents": "\\$PAGE->cm"
+    }, {
+        "trigger": "url\tMoodle",
+        "contents": "\\$PAGE->url"
+    }, {
+        "trigger": "required_param\tMoodle",
+        "contents": "required_param('id', PARAM_INT)"
+    }, {
+        "trigger": "get_coursemodule_from_id\tMoodle",
+        "contents": "get_coursemodule_from_id('mymodulename', \\$cmid, 0, false, MUST_EXIST)"
+    }, {
+        "trigger": "set_title\tMoodle",
+        "contents": "\\$PAGE->set_title('My modules page title')"
+    }, {
+        "trigger": "set_heading\tMoodle",
+        "contents": "\\$PAGE->set_heading('My modules page heading')"
+    }, {
+        "trigger": "set_contextcontext_system\tMoodle",
+        "contents": "\\$PAGE->set_context(context_system::instance())"
+    }, {
+        "trigger": "set_contextcontext_coursecat\tMoodle",
+        "contents": "\\$PAGE->set_context(context_coursecat::instance(\\$categoryid))"
+    }, {
+        "trigger": "set_contextcontext_course\tMoodle",
+        "contents": "\\$PAGE->set_context(context_course::instance(\\$courseid))"
+    }, {
+        "trigger": "set_contextcontext_module\tMoodle",
+        "contents": "\\$PAGE->set_context(context_module::instance(\\$moduleid))"
+    }, {
+        "trigger": "set_pagelayout\tMoodle",
+        "contents": "\\$PAGE->set_pagelayout('standard')"
+    }, {
+        "trigger": "set_activity_record\tMoodle",
+        "contents": "\\$PAGE->set_activity_record(\\$activityrecord)"
+    }, {
+        "trigger": "set_blocks_editing_capability\tMoodle",
+        "contents": "\\$PAGE->set_blocks_editing_capability(\\$strcapability)"
+    }, {
+        "trigger": "set_button\tMoodle",
+        "contents": "\\$PAGE->set_button(\\$htmlstring)"
+    }, {
+        "trigger": "set_cacheable\tMoodle",
+        "contents": "\\$PAGE->set_cacheable(true/false)"
+    }, {
+        "trigger": "set_category_by_id\tMoodle",
+        "contents": "\\$PAGE->set_category_by_id(\\$categoryid)"
+    }, {
+        "trigger": "set_cm\tMoodle",
+        "contents": "\\$PAGE->set_cm(\\$coursemodulerecord)"
+    }, {
+        "trigger": "set_course\tMoodle",
+        "contents": "\\$PAGE->set_course(\\$courserecord)"
+    }, {
+        "trigger": "set_docs_path\tMoodle",
+        "contents": "\\$PAGE->set_docs_path(\\$strpath)"
+    }, {
+        "trigger": "set_focuscontrol\tMoodle",
+        "contents": "\\$PAGE->set_focuscontrol(\\$controlid)"
+    }, {
+        "trigger": "set_headingmenu\tMoodle",
+        "contents": "\\$PAGE->set_headingmenu(\\$htmlstring)"
+    }, {
+        "trigger": "set_other_editing_capability\tMoodle",
+        "contents": "\\$PAGE->set_other_editing_capability(\\$strcapability)"
+    }, {
+        "trigger": "set_pagetype\tMoodle",
+        "contents": "\\$PAGE->set_pagetype(\\$strpagetype)"
+    }, {
+        "trigger": "set_periodic_refresh_delay\tMoodle",
+        "contents": "\\$PAGE->set_periodic_refresh_delay(\\$intdelay)"
+    }, {
+        "trigger": "set_popup_notification_allowed\tMoodle",
+        "contents": "\\$PAGE->set_popup_notification_allowed(true/false)"
+    }, {
+        "trigger": "set_subpage\tMoodle",
+        "contents": "\\$PAGE->set_subpage(\\$strsubpage)"
+    }, {
+        "trigger": "add_body_class\tMoodle",
+        "contents": "\\$PAGE->add_body_class(\\$strcssclass)"
+    }, {
+        "trigger": "add_body_classes\tMoodle",
+        "contents": "\\$PAGE->add_body_classes(\\$arrayofclasses)"
+    }, {
+        "trigger": "activityrecord\tMoodle",
+        "contents": "\\$PAGE->activityrecord"
+    }, {
+        "trigger": "blockmanager\tMoodle",
+        "contents": "\\$PAGE->blockmanager"
+    }, {
+        "trigger": "bodyid\tMoodle",
+        "contents": "\\$PAGE->bodyid"
+    }, {
+        "trigger": "categories\tMoodle",
+        "contents": "\\$PAGE->categories"
+    }, {
+        "trigger": "category\tMoodle",
+        "contents": "\\$PAGE->category"
+    }, {
+        "trigger": "devicetypeinuse\tMoodle",
+        "contents": "\\$PAGE->devicetypeinuse"
+    }, {
+        "trigger": "headerprinted\tMoodle",
+        "contents": "\\$PAGE->headerprinted"
+    }, {
+        "trigger": "pageheading\tMoodle",
+        "contents": "\\$PAGE->heading"
+    }, {
+        "trigger": "navbar\tMoodle",
+        "contents": "\\$PAGE->navbar"
+    }, {
+        "trigger": "requires\tMoodle",
+        "contents": "\\$PAGE->requires"
+    }, {
+        "trigger": "settingsnav\tMoodle",
+        "contents": "\\$PAGE->settingsnav"
+    }, {
+        "trigger": "theme\tMoodle",
+        "contents": "\\$PAGE->theme"
+    }, {
+        "trigger": "title\tMoodle",
+        "contents": "\\$PAGE->title"
+    }, {
+        "trigger": "label\tMoodle",
+        "contents": "\\$OUTPUT->label(html_label \\$label)"
+    }, {
+        "trigger": "link\tMoodle",
+        "contents": "\\$OUTPUT->link(\\$link)"
+    }, {
+        "trigger": "image\tMoodle",
+        "contents": "\\$OUTPUT->image()"
+    }, {
+        "trigger": "form\tMoodle",
+        "contents": "\\$OUTPUT->form(\\$form, \\$contents)"
+    }, {
+        "trigger": "confirm\tMoodle",
+        "contents": "\\$OUTPUT->confirm(\\$message, \\$formcontinue, \\$formcancel)"
+    }, {
+        "trigger": "button\tMoodle",
+        "contents": "\\$OUTPUT->button(\\$formwithbutton)"
+    }, {
+        "trigger": "htmllist\tMoodle",
+        "contents": "\\$OUTPUT->htmllist(\\$list)"
+    }, {
+        "trigger": "html_writer\tMoodle",
+        "contents": "html_writer::table(\\$table)"
+    }, {
+        "trigger": "select\tMoodle",
+        "contents": "\\$OUTPUT->select(\\$select)"
+    }, {
+        "trigger": "html_selectmake\tMoodle",
+        "contents": "html_select::make(\\$options, 'choice1', 'value1')"
+    }, {
+        "trigger": "html_selectmake_time_selector\tMoodle",
+        "contents": "html_select::make_time_selector('days', 'myday', '120308000')"
+    }, {
+        "trigger": "checkbox\tMoodle",
+        "contents": "\\$OUTPUT->checkbox(\\$checkbox, 'donotask')"
+    }, {
+        "trigger": "old_icon_url\tMoodle",
+        "contents": "\\$OUTPUT->old_icon_url('moodlelogo')"
+    }, {
+        "trigger": "action_icon\tMoodle",
+        "contents": "\\$OUTPUT->action_icon(\\$icon)"
+    }, {
+        "trigger": "box\tMoodle",
+        "contents": "\\$OUTPUT->box('A message of some kind')"
+    }, {
+        "trigger": "box_start\tMoodle",
+        "contents": "\\$OUTPUT->box_start()"
+    }, {
+        "trigger": "box_end\tMoodle",
+        "contents": "\\$OUTPUT->box_end()"
+    }, {
+        "trigger": "close_window_button\tMoodle",
+        "contents": "\\$OUTPUT->close_window_button()"
+    }, {
+        "trigger": "container\tMoodle",
+        "contents": "\\$OUTPUT->container('A message of some kind', 'important', 'notice')"
+    }, {
+        "trigger": "container_start\tMoodle",
+        "contents": "\\$OUTPUT->container_start('important', 'notice')"
+    }, {
+        "trigger": "container_end\tMoodle",
+        "contents": "\\$OUTPUT->container_end()"
+    }, {
+        "trigger": "continue_button\tMoodle",
+        "contents": "\\$OUTPUT->continue_button(new moodle_url('http://domain.com/index.php', array('id' => 2, 'userid' => 4)))"
+    }, {
+        "trigger": "error_text\tMoodle",
+        "contents": "\\$OUTPUT->error_text('Its all broken!')"
+    }, {
+        "trigger": "footer\tMoodle",
+        "contents": "\\$OUTPUT->footer()"
+    }, {
+        "trigger": "header\tMoodle",
+        "contents": "\\$OUTPUT->header()"
+    }, {
+        "trigger": "heading\tMoodle",
+        "contents": "\\$OUTPUT->heading(get_string('help'), 3, 'helptitle', 'uniqueid')"
+    }, {
+        "trigger": "heading_with_help\tMoodle",
+        "contents": "\\$OUTPUT->heading_with_help(\\$helpicon)"
+    }, {
+        "trigger": "help_icon\tMoodle",
+        "contents": "\\$OUTPUT->help_icon(\\$helpicon)"
+    }, {
+        "trigger": "textfield\tMoodle",
+        "contents": "\\$OUTPUT->textfield(\\$field)"
+    }, {
+        "trigger": "paging_bar\tMoodle",
+        "contents": "\\$OUTPUT->paging_bar(\\$pagingbar)"
+    }, {
+        "trigger": "user_picture\tMoodle",
+        "contents": "\\$OUTPUT->user_picture(\\$userpic)"
+    }, {
+        "trigger": "get_string\tMoodle",
+        "contents": "get_string('module_pluginlangfilename', 'plugintitle')"
+    }, {
+        "trigger": "print_string\tMoodle",
+        "contents": "print_string('module_pluginlangfilename', 'plugintitle')"
+    }, {
+        "trigger": "get_strings\tMoodle",
+        "contents": "get_strings(array('enable', 'disable', 'up', 'down', 'none'), 'qtype_dragdrop')"
+    }, {
+        "trigger": "asort\tMoodle",
+        "contents": "asort()"
+    }, {
+        "trigger": "code2utf8\tMoodle",
+        "contents": "code2utf8(\\$string)"
+    }, {
+        "trigger": "convert\tMoodle",
+        "contents": "convert(\\$string)"
+    }, {
+        "trigger": "encode_mimeheader\tMoodle",
+        "contents": "encode_mimeheader(\\$string)"
+    }, {
+        "trigger": "entities_to_utf8\tMoodle",
+        "contents": "entities_to_utf8(\\$string)"
+    }, {
+        "trigger": "specialtoascii\tMoodle",
+        "contents": "specialtoascii(\\$string)"
+    }, {
+        "trigger": "strlen\tMoodle",
+        "contents": "strlen(\\$string)"
+    }, {
+        "trigger": "strpos\tMoodle",
+        "contents": "strpos(\\$string)"
+    }, {
+        "trigger": "strrpos\tMoodle",
+        "contents": "strrpos(\\$string)"
+    }, {
+        "trigger": "strtolower\tMoodle",
+        "contents": "strtolower(\\$string)"
+    }, {
+        "trigger": "strtotitle\tMoodle",
+        "contents": "strtotitle(\\$string)"
+    }, {
+        "trigger": "strtoupper\tMoodle",
+        "contents": "strtoupper(\\$string)"
+    }, {
+        "trigger": "substr\tMoodle",
+        "contents": "substr(\\$string)"
+    }, {
+        "trigger": "trim_utf8_bom\tMoodle",
+        "contents": "trim_utf8_bom(\\$string)"
+    }, {
+        "trigger": "utf8_to_entities\tMoodle",
+        "contents": "utf8_to_entities(\\$string)"
+    }, {
+        "trigger": "pluginversion\tMoodle",
+        "contents": "\\$plugin->version"
+    }, {
+        "trigger": "pluginrequires\tMoodle",
+        "contents": "\\$plugin->requires"
+    }, {
+        "trigger": "plugindependencies\tMoodle",
+        "contents": "\\$plugin->dependencies"
+    }, {
+        "trigger": "add\tMoodle",
+        "contents": "add(new admin_setting_FIELDTYPE('MYMOD/MYNAME', 'MYNAME', 'MYDESC', array('value' => '0', 'fix' => false), PARAM_INT))"
+    }, {
+        "trigger": "get_fast_modinfo\tMoodle",
+        "contents": "get_fast_modinfo(\\$course)"
+    }, {
+        "trigger": "filter_user_list\tMoodle",
+        "contents": "filter_user_list(\\$users)"
+    }, {
+        "trigger": "define_my_steps\tMoodle",
+        "contents": "define_my_steps()"
+    }, {
+        "trigger": "set_source_table\tMoodle",
+        "contents": "set_source_table()"
+    }, {
+        "trigger": "set_source_sql\tMoodle",
+        "contents": "set_source_sql()"
+    }, {
+        "trigger": "prepare_activity_structure\tMoodle",
+        "contents": "prepare_activity_structure()"
+    }, {
+        "trigger": "calendar_eventcreate\tMoodle",
+        "contents": "calendar_event::create(\\$properties)"
+    }, {
+        "trigger": "calendar_eventupdate\tMoodle",
+        "contents": "calendar_event::update(\\$data, \\$checkcapability = true)"
+    }, {
+        "trigger": "calendar_event_hook\tMoodle",
+        "contents": "calendar_event_hook(\\$action, array \\$args)"
+    }, {
+        "trigger": "calendar_get_default_courses\tMoodle",
+        "contents": "calendar_get_default_courses()"
+    }, {
+        "trigger": "calendar_get_days\tMoodle",
+        "contents": "calendar_get_days()"
+    }, {
+        "trigger": "calendar_get_starting_weekday\tMoodle",
+        "contents": "calendar_get_starting_weekday()"
+    }, {
+        "trigger": "calendar_day_representation\tMoodle",
+        "contents": "calendar_day_representation(\\$tstamp, \\$now = false, \\$usecommonwords = true)"
+    }, {
+        "trigger": "calendar_time_representation\tMoodle",
+        "contents": "calendar_time_representation(\\$time)"
+    }, {
+        "trigger": "calendar_wday_name\tMoodle",
+        "contents": "calendar_wday_name(\\$englishname)"
+    }, {
+        "trigger": "calendar_days_in_month\tMoodle",
+        "contents": "calendar_days_in_month(\\$month, \\$year)"
+    }, {
+        "trigger": "calendar_get_link_href\tMoodle",
+        "contents": "calendar_get_link_href(\\$linkbase, \\$d, \\$m, \\$y)"
+    }, {
+        "trigger": "calendar_get_mini\tMoodle",
+        "contents": "calendar_get_mini(\\$courses, \\$groups, \\$users, \\$cal_month = false, \\$cal_year = false)"
+    }, {
+        "trigger": "calendar_get_popup\tMoodle",
+        "contents": "calendar_get_popup(\\$is_today, \\$event_timestart, \\$popupcontent = '') "
+    }, {
+        "trigger": "calendar_add_month\tMoodle",
+        "contents": "calendar_add_month(\\$month, \\$year)"
+    }, {
+        "trigger": "calendar_sub_month\tMoodle",
+        "contents": "calendar_sub_month(\\$month, \\$year)"
+    }, {
+        "trigger": "calendar_get_module_cached\tMoodle",
+        "contents": "calendar_get_module_cached(&\\$coursecache, \\$modulename, \\$instance) "
+    }, {
+        "trigger": "calendar_get_course_cached\tMoodle",
+        "contents": "calendar_get_course_cached(&\\$coursecache, \\$courseid)"
+    }, {
+        "trigger": "calendar_print_month_selector\tMoodle",
+        "contents": "calendar_print_month_selector(\\$name, \\$selected)"
+    }, {
+        "trigger": "calendar_top_controls\tMoodle",
+        "contents": "calendar_top_controls(\\$type, \\$data)"
+    }, {
+        "trigger": "calendar_filter_controls\tMoodle",
+        "contents": "calendar_filter_controls(moodle_url \\$returnurl)"
+    }, {
+        "trigger": "calendar_preferences_button\tMoodle",
+        "contents": "calendar_preferences_button(stdClass \\$course)"
+    }, {
+        "trigger": "calendar_set_filters\tMoodle",
+        "contents": "calendar_set_filters(array \\$courseeventsfrom, \\$ignorefilters = false)"
+    }, {
+        "trigger": "calendar_get_link_previous\tMoodle",
+        "contents": "calendar_get_link_previous(\\$text, \\$linkbase, \\$d, \\$m, \\$y, \\$accesshide = false)"
+    }, {
+        "trigger": "calendar_get_link_next\tMoodle",
+        "contents": "calendar_get_link_next(\\$text, \\$linkbase, \\$d, \\$m, \\$y, \\$accesshide = false)"
+    }, {
+        "trigger": "calendar_get_allowed_types\tMoodle",
+        "contents": "calendar_get_allowed_types(&\\$allowed, \\$course = null)"
+    }, {
+        "trigger": "calendar_add_event_allowed\tMoodle",
+        "contents": "calendar_add_event_allowed(\\$event) "
+    }, {
+        "trigger": "calendar_edit_event_allowed\tMoodle",
+        "contents": "calendar_edit_event_allowed(\\$event)"
+    }, {
+        "trigger": "calendar_user_can_add_event\tMoodle",
+        "contents": "calendar_user_can_add_event(\\$course)"
+    }, {
+        "trigger": "calendar_show_event_type\tMoodle",
+        "contents": "calendar_show_event_type(\\$type, \\$user = null)"
+    }, {
+        "trigger": "calendar_set_event_type_display\tMoodle",
+        "contents": "calendar_set_event_type_display(\\$type, \\$display = null, \\$user = null)"
+    }, {
+        "trigger": "calendar_get_events\tMoodle",
+        "contents": "calendar_get_events(\\$tstart, \\$tend, \\$users, \\$groups, \\$courses, \\$withduration = true, \\$ignorehidden = true)"
+    }, {
+        "trigger": "calendar_events_by_day\tMoodle",
+        "contents": "calendar_events_by_day(\\$events, \\$month, \\$year, &\\$eventsbyday, &\\$durationbyday, &\\$typesbyday, &\\$courses) "
+    }, {
+        "trigger": "calendar_get_upcoming\tMoodle",
+        "contents": "calendar_get_upcoming(\\$courses, \\$groups, \\$users, \\$daysinfuture, \\$maxevents, \\$fromtime = 0)"
+    }, {
+        "trigger": "calendar_get_block_upcoming\tMoodle",
+        "contents": "calendar_get_block_upcoming(\\$events, \\$linkhref = NULL)"
+    }, {
+        "trigger": "calendar_format_event_time\tMoodle",
+        "contents": "calendar_format_event_time(\\$event, \\$now, \\$linkparams = null, \\$usecommonwords = true, \\$showtime = 0)"
+    }, {
+        "trigger": "calendar_add_event_metadata\tMoodle",
+        "contents": "calendar_add_event_metadata(\\$event)"
+    }, {
+        "trigger": "table_exists\tMoodle",
+        "contents": "table_exists(\\$table)"
+    }, {
+        "trigger": "create_table\tMoodle",
+        "contents": "create_table(\\$table, \\$continue=true, \\$feedback=true)"
+    }, {
+        "trigger": "drop_table\tMoodle",
+        "contents": "drop_table(\\$table, \\$continue=true, \\$feedback=true)"
+    }, {
+        "trigger": "rename_table\tMoodle",
+        "contents": "rename_table(\\$table, \\$newname, \\$continue=true, \\$feedback=true)"
+    }, {
+        "trigger": "field_exists\tMoodle",
+        "contents": "field_exists(\\$table, \\$field)"
+    }, {
+        "trigger": "add_field\tMoodle",
+        "contents": "add_field(\\$table, \\$field, \\$continue=true, \\$feedback=true)"
+    }, {
+        "trigger": "drop_field\tMoodle",
+        "contents": "drop_field(\\$table, \\$field, \\$continue=true, \\$feedback=true)"
+    }, {
+        "trigger": "change_field_type\tMoodle",
+        "contents": "change_field_type(\\$table, \\$field, \\$continue=true, \\$feedback=true)"
+    }, {
+        "trigger": "change_field_precision\tMoodle",
+        "contents": "change_field_precision(\\$table, \\$field, \\$continue=true, \\$feedback=true)"
+    }, {
+        "trigger": "change_field_unsigned\tMoodle",
+        "contents": "change_field_unsigned(\\$table, \\$field, \\$continue=true, \\$feedback=true)"
+    }, {
+        "trigger": "change_field_notnull\tMoodle",
+        "contents": "change_field_notnull(\\$table, \\$field, \\$continue=true, \\$feedback=true)"
+    }, {
+        "trigger": "drop_enum_from_field\tMoodle",
+        "contents": "drop_enum_from_field(\\$table, \\$field, \\$continue=true, \\$feedback=true)"
+    }, {
+        "trigger": "change_field_default\tMoodle",
+        "contents": "change_field_default(\\$table, \\$field, \\$continue=true, \\$feedback=true)"
+    }, {
+        "trigger": "rename_field\tMoodle",
+        "contents": "rename_field(\\$table, \\$field, \\$newname, \\$continue=true, \\$feedback=true)"
+    }, {
+        "trigger": "index_exists\tMoodle",
+        "contents": "index_exists(\\$table, \\$index)"
+    }, {
+        "trigger": "find_index_name\tMoodle",
+        "contents": "find_index_name(\\$table, \\$index)"
+    }, {
+        "trigger": "add_index\tMoodle",
+        "contents": "add_index(\\$table, \\$index, \\$continue=true, \\$feedback=true)"
+    }, {
+        "trigger": "drop_index\tMoodle",
+        "contents": "drop_index(\\$table, \\$index, \\$continue=true, \\$feedback=true)"
+    }, {
+        "trigger": "is_enrolled\tMoodle",
+        "contents": "is_enrolled(context \\$context, \\$user = null, \\$withcapability = '', \\$onlyactive = false)"
+    }, {
+        "trigger": "get_enrolled_sql\tMoodle",
+        "contents": "get_enrolled_sql(context \\$context, \\$withcapability = '', \\$groupid = 0, \\$onlyactive = false)"
+    }, {
+        "trigger": "get_enrolled_users\tMoodle",
+        "contents": "get_enrolled_users(context \\$context, \\$withcapability = '', \\$groupid = 0, \\$userfields = 'u.*', \\$orderby = '', \\$limitfrom = 0, \\$limitnum = 0)"
+    }, {
+        "trigger": "count_enrolled_users\tMoodle",
+        "contents": "count_enrolled_users(context \\$context, \\$withcapability = '', \\$groupid = 0)"
+    }, {
+        "trigger": "events_trigger\tMoodle",
+        "contents": "events_trigger('user_enrolled', \\$ue)"
+    }, {
+        "trigger": "handlers\tMoodle",
+        "contents": "\\$handlers = array ( 'user_enrolled' => array ('handlerfile' => '/mod/MYMOD/lib.php', 'handlerfunction'  => 'MYMODFUNCTION', 'schedule'         => 'instant', 'internal' => 1,))"
+    }, {
+        "trigger": "messageproviders\tMoodle",
+        "contents": "\\$messageproviders = array ('MYPROVIDER' => array ())"
+    }, {
+        "trigger": "message_send\tMoodle",
+        "contents": "message_send(\\$eventdata)"
+    }, {
+        "trigger": "get_renderer\tMoodle",
+        "contents": "\\$PAGE->get_renderer('core', 'media')"
+    }, {
+        "trigger": "get_user_preferences\tMoodle",
+        "contents": "get_user_preferences(\\$name = null, \\$default = null, \\$user = null)"
+    }, {
+        "trigger": "set_user_preference\tMoodle",
+        "contents": "set_user_preference(\\$name, \\$value, \\$user = null)"
+    }, {
+        "trigger": "set_user_preferences\tMoodle",
+        "contents": "set_user_preferences(array \\$prefarray, \\$user = null)"
+    }, {
+        "trigger": "unset_user_preference\tMoodle",
+        "contents": "unset_user_preference(\\$name, \\$user = null)"
+    }, {
+        "trigger": "get_ratings\tMoodle",
+        "contents": "get_ratings()"
+    }, {
+        "trigger": "get_user_grades\tMoodle",
+        "contents": "get_user_grades()"
+    }, {
+        "trigger": "delete_ratings\tMoodle",
+        "contents": "delete_ratings()"
+    }, {
+        "trigger": "tag_set\tMoodle",
+        "contents": "tag_set('user', \\$userId, array())"
+    }, {
+        "trigger": "tag_get_tags\tMoodle",
+        "contents": "tag_get_tags('user', \\$userId)"
+    }, {
+        "trigger": "tag_set_add\tMoodle",
+        "contents": "tag_set_add('user', \\$userId, 'chess')"
+    }, {
+        "trigger": "tag_set_delete\tMoodle",
+        "contents": "tag_set_delete('user', \\$userId, 'chess')"
+    }, {
+        "trigger": "tag_description_set\tMoodle",
+        "contents": "tag_description_set(\\$firstTagKey, '<p>TEXT</p>', FORMAT_HTML)"
+    }, {
+        "trigger": "tag_print_cloud\tMoodle",
+        "contents": "tag_print_cloud()"
+    }, {
+        "trigger": "usergetdate\tMoodle",
+        "contents": "usergetdate(time())"
+    }, {
+        "trigger": "userdate\tMoodle",
+        "contents": "userdate(make_timestamp(\\$y, \\$m), 'Current user time')"
+    }, {
+        "trigger": "make_timestamp\tMoodle",
+        "contents": "make_timestamp()"
+    }, {
+        "trigger": "usertime\tMoodle",
+        "contents": "usertime()"
+    }, {
+        "trigger": "usergetmidnight\tMoodle",
+        "contents": "usergetmidnight()"
+    }, {
+        "trigger": "usertimezone\tMoodle",
+        "contents": "usertimezone()"
+    }, {
+        "trigger": "get_user_timezone_offset\tMoodle",
+        "contents": "get_user_timezone_offset()"
+    }, {
+        "trigger": "format_time\tMoodle",
+        "contents": "format_time()"
+    }, {
+        "trigger": "get_timezone_offset\tMoodle",
+        "contents": "get_timezone_offset()"
+    }, {
+        "trigger": "dst_changes_for_year\tMoodle",
+        "contents": "dst_changes_for_year()"
+    }, {
+        "trigger": "dst_offset_on\tMoodle",
+        "contents": "dst_offset_on()"
+    }, {
+        "trigger": "find_day_in_month\tMoodle",
+        "contents": "find_day_in_month()"
+    }, {
+        "trigger": "days_in_month\tMoodle",
+        "contents": "days_in_month()"
+    }, {
+        "trigger": "dayofweek\tMoodle",
+        "contents": "dayofweek()"
+    }, {
+        "trigger": "set_module_viewed\tMoodle",
+        "contents": "set_module_viewed(\\$cm)"
+    }, {
+        "trigger": "optional_param\tMoodle",
+        "contents": "optional_param('itemnumber', 0, PARAM_INT)"
+    }, {
+        "trigger": "dbtype\tMoodle",
+        "contents": "\\$CFG->dbtype"
+    }, {
+        "trigger": "dblibrary\tMoodle",
+        "contents": "\\$CFG->dblibrary"
+    }, {
+        "trigger": "dbhost\tMoodle",
+        "contents": "\\$CFG->dbhost"
+    }, {
+        "trigger": "dbname\tMoodle",
+        "contents": "\\$CFG->dbname"
+    }, {
+        "trigger": "dbuser\tMoodle",
+        "contents": "\\$CFG->dbuser"
+    }, {
+        "trigger": "dbpass\tMoodle",
+        "contents": "\\$CFG->dbpass"
+    }, {
+        "trigger": "prefix\tMoodle",
+        "contents": "\\$CFG->prefix"
+    }, {
+        "trigger": "dboptions\tMoodle",
+        "contents": "\\$CFG->dboptions"
+    }, {
+        "trigger": "wwwroot\tMoodle",
+        "contents": "\\$CFG->wwwroot"
+    }, {
+        "trigger": "dataroot\tMoodle",
+        "contents": "\\$CFG->dataroot"
+    }, {
+        "trigger": "directorypermissions\tMoodle",
+        "contents": "\\$CFG->directorypermissions"
+    }, {
+        "trigger": "admin\tMoodle",
+        "contents": "\\$CFG->admin"
+    }, {
+        "trigger": "dirroot\tMoodle",
+        "contents": "\\$CFG->dirroot"
+    }]
+}
