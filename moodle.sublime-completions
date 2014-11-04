@@ -3,7 +3,7 @@
     "completions": [
     {
         "trigger": "capabilities\tMoodle",
-        "contents": "\\$capabilities = array('${1:mod}/${2:MYPLUGIN}:${3:MYCAPABILITY}' => array('riskbitmask' => RISK_SPAM, 'captype' => 'write', 'contextlevel' =>CONTEXT_MODULE, 'archetypes' => array('editingteacher' => CAP_ALLOW)))"
+        "contents": "\\$capabilities = array('${1:mod}/${2:MYPLUGIN}:${3:MYCAPABILITY}' => array('riskbitmask' => ${4:RISK_SPAM}, 'captype' => ${5:'write'}, 'contextlevel' =>${6:CONTEXT_MODULE}, 'archetypes' => array(${7:'editingteacher' => CAP_ALLOW})))"
     }, {
         "trigger": "context_system\tMoodle",
         "contents": "context_system::instance()"
@@ -93,13 +93,13 @@
         "contents": "\\$DB->get_records_sql_menu(${1:\\$sql}, ${2: array \\$params=null}, ${3: \\$limitfrom=0}, ${4: \\$limitnum=0})"
     }, {
         "trigger": "count_records\tMoodle",
-        "contents": "\\$DB->count_records(${1:\\$table}, ${2: array \\$conditions=null}) "
+        "contents": "\\$DB->count_records(${1:\\$table}, ${2: array \\$conditions=null})"
     }, {
         "trigger": "count_records_select\tMoodle",
         "contents": "\\$DB->count_records_select(${1:\\$table}, ${2: \\$select}, ${3: array \\$params=null}, ${4: \\$countitem='COUNT(x)'})"
     }, {
         "trigger": "count_records_sql\tMoodle",
-        "contents": "\\$DB->count_records_sql(${1:\\$sql}, ${2: array \\$params=null}) "
+        "contents": "\\$DB->count_records_sql(${1:\\$sql}, ${2: array \\$params=null})"
     }, {
         "trigger": "record_exists\tMoodle",
         "contents": "\\$DB->record_exists(${1:\\$table}, ${2: array \\$conditions=null})"
@@ -252,7 +252,7 @@
         "contents": "file_prepare_draft_area(${1:\\$draftid_editor}, ${2: \\$context->id}, ${3: 'mod_MYMOD'}, ${4: 'entry'}, ${5: \\$entry->id}, ${6: array('subdirs'=>true)}, ${7: \\$entry->definition})"
     }, {
         "trigger": "file_save_draft_area_files\tMoodle",
-        "contents": "file_save_draft_area_files(${1:\\$data->attachments}, ${2: \\$context->id}, ${3: 'mod_glossary'}, ${4: 'attachment'}, ${5: \\$entry->id}, ${6: array('subdirs' => 0}, ${7: 'maxbytes' => \\$maxbytes}, ${8: 'maxfiles' => 50)})"
+        "contents": "file_save_draft_area_files(${1:\\$data->attachments}, ${2: \\$context->id}, ${3: 'mod_glossary'}, ${4: 'attachment'}, ${5: \\$entry->id}, array(${6:'subdirs' => 0}, ${7: 'maxbytes' => \\$maxbytes}, ${8: 'maxfiles' => 50}))"
     }, {
         "trigger": "file_rewrite_pluginfile_urls\tMoodle",
         "contents": "file_rewrite_pluginfile_urls(${1:\\$messagetext}, ${2: 'pluginfile.php'}, ${3: \\$context->id}, ${4: 'mod_mymodule'}, ${5: 'proper_file_area'}, ${6: \\$itemid})"
@@ -351,13 +351,13 @@
         "contents": "addElement(${1:'checkbox'}, ${2: 'ratingtime'}, ${3: get_string('ratingtime'}, ${4: 'forum')})"
     }, {
         "trigger": "addElementadvcheckbox\tMoodle",
-        "contents": "addElement(${1:'advcheckbox'}, ${2: 'ratingtime'}, ${3: get_string('ratingtime'}, ${4: 'forum')}, ${5: 'Label displayed after checkbox'}, ${6: array('group' => 1)}, ${7: array(0}, ${8: 1)})"
+        "contents": "addElement(${1:'advcheckbox'}, ${2: 'ratingtime'}, ${3: get_string('ratingtime', 'forum')}, ${4: 'Label displayed after checkbox'}, ${5:array('group' => 1)}, ${6: array(0, 1)})"
     }, {
         "trigger": "addElementchoosecoursefile\tMoodle",
-        "contents": "addElement(${1:'choosecoursefile'}, ${2: 'mediafile'}, ${3: get_string('mediafile'}, ${4: 'lesson')}, ${5: array('courseid'=>\\$COURSE->id)})"
+        "contents": "addElement(${1:'choosecoursefile'}, ${2: 'mediafile'}, ${3: get_string('mediafile', 'lesson')}, ${4: array('courseid'=>\\$COURSE->id)})"
     }, {
         "trigger": "addGroupRule\tMoodle",
-        "contents": "addGroupRule(${1:'elementname'}, ${2: array('value' => array(array(list}, ${3: of}, ${4: rule}, ${5: params}, ${6: but}, ${7: fieldname)))})"
+        "contents": "addGroupRule(${1:'elementname'}, array(${2:'value'} => array(array(${3:list}, ${4: of}, ${5: rule}, ${6: params}, ${7: but}, ${8: fieldname}))))"
     }, {
         "trigger": "addElementdate_time_selector\tMoodle",
         "contents": "addElement(${1:'date_time_selector'}, ${2: 'assesstimestart'}, ${3: get_string('from')})"
@@ -369,7 +369,7 @@
         "contents": "setDefault(${1:'yesno'}, ${2: 0})"
     }, {
         "trigger": "addElementselect\tMoodle",
-        "contents": "addElement(${1:'select'}, ${2: 'type'}, ${3: get_string('forumtype'}, ${4: 'forum')}, ${5: \\$FORUM_TYPES}, ${6: \\$attributes})"
+        "contents": "addElement(${1:'select'}, ${2: 'type'}, ${3: get_string('forumtype', 'forum')}, ${4: \\$FORUM_TYPES}, ${5: \\$attributes})"
     }, {
         "trigger": "setMultiple\tMoodle",
         "contents": "setMultiple(${1:true})"
@@ -387,13 +387,13 @@
         "contents": "addElement(${1:'modgrade'}, ${2: 'scale'}, ${3: get_string('grade')}, ${4: false})"
     }, {
         "trigger": "addElementstatic\tMoodle",
-        "contents": "addElement(${1:'static'}, ${2: 'description'}, ${3: get_string('description'}, ${4: 'exercise')}, ${5:get_string('descriptionofexercise'}, ${6: 'exercise'}, ${7: \\$COURSE->students)})"
+        "contents": "addElement(${1:'static'}, ${2: 'description'}, ${3: get_string('description', 'exercise')}, ${4:get_string('descriptionofexercise', 'exercise'}, ${5: \\$COURSE->students)})"
     }, {
         "trigger": "addElementtext\tMoodle",
-        "contents": "addElement(${1:'text'}, ${2: 'name'}, ${3: get_string('forumname'}, ${4: 'forum')}, ${5: \\$attributes})"
+        "contents": "addElement(${1:'text'}, ${2: 'name'}, ${3: get_string('forumname', 'forum')}, ${4: \\$attributes})"
     }, {
         "trigger": "addElementtextarea\tMoodle",
-        "contents": "addElement(${1:'textarea'}, ${2: 'introduction'}, ${3: get_string('introtext'}, ${4: 'survey')}, ${5: 'wrap=virtual rows=20 cols=50'})"
+        "contents": "addElement(${1:'textarea'}, ${2: 'introduction'}, ${3: get_string('introtext', 'survey')}, ${4: 'wrap=virtual rows=20 cols=50'})"
     }, {
         "trigger": "addElementrecaptcha\tMoodle",
         "contents": "addElement(${1:'recaptcha'}, ${2: 'recaptcha_field_name'}, ${3: \\$attributes})"
@@ -402,25 +402,25 @@
         "contents": "addElement(${1:'passwordunmask'}, ${2: 'password'}, ${3: get_string('label')}, ${4: \\$attributes})"
     }, {
         "trigger": "addElementselectyesno\tMoodle",
-        "contents": "addElement(${1:'selectyesno'}, ${2: 'maxbytes'}, ${3: get_string('maxattachmentsize'}, ${4: 'forum')})"
+        "contents": "addElement(${1:'selectyesno'}, ${2: 'maxbytes'}, ${3: get_string('maxattachmentsize', 'forum')})"
     }, {
         "trigger": "addElementselectwithlink\tMoodle",
-        "contents": "addElement(${1:'selectwithlink'}, ${2: 'scaleid'}, ${3: get_string('scale')}, ${4: \\$options}, ${5: null}, ${6: array('link' => URL}, ${7: 'label' => get_string('scalescustomcreate'))})"
+        "contents": "addElement(${1:'selectwithlink'}, ${2: 'scaleid'}, ${3: get_string('scale')}, ${4:\\$options}, ${5: null}, array(${6:'link' => URL}, ${7: 'label' => get_string('scalescustomcreate')}))"
     }, {
         "trigger": "addElementdate_selector\tMoodle",
         "contents": "addElement(${1:'date_selector'}, ${2: 'assesstimefinish'}, ${3: get_string('to')})"
     }, {
         "trigger": "addElementduration\tMoodle",
-        "contents": "addElement(${1:'duration'}, ${2: 'timelimit'}, ${3: get_string('timelimit'}, ${4: 'quiz')})"
+        "contents": "addElement(${1:'duration'}, ${2: 'timelimit'}, ${3: get_string('timelimit', 'quiz')})"
     }, {
         "trigger": "addElementeditor\tMoodle",
-        "contents": "addElement(${1:'editor'}, ${2: 'fieldname'}, ${3: get_string('labeltext'}, ${4: 'langfile')})"
+        "contents": "addElement(${1:'editor'}, ${2: 'fieldname'}, ${3: get_string('labeltext', 'langfile')})"
     }, {
         "trigger": "addElementfilepicker\tMoodle",
-        "contents": "addElement(${1:'filepicker'}, ${2: 'userfile'}, ${3: get_string('file')}, ${4: null}, ${5: array('maxbytes' => \\$maxbytes}, ${6: 'accepted_types' => '*')})"
+        "contents": "addElement(${1:'filepicker'}, ${2: 'userfile'}, ${3: get_string('file')}, ${4: null}, array(${5:'maxbytes' => \\$maxbytes}, ${6: 'accepted_types' => '*'}))"
     }, {
         "trigger": "addElementfilemanager\tMoodle",
-        "contents": "addElement(${1:'filemanager'}, ${2: 'attachments'}, ${3: get_string('attachment'}, ${4: 'moodle')}, ${5: null}, ${6:array('subdirs' => 0}, ${7: 'maxbytes' => \\$maxbytes}, ${8: 'maxfiles' => 50}, ${9: 'accepted_types' => array('document') )})"
+        "contents": "addElement(${1:'filemanager'}, ${2: 'attachments'}, ${3: get_string('attachment', 'moodle')}, ${4: null}, array(${5:'subdirs' => 0}, ${6: 'maxbytes' => \\$maxbytes}, ${7: 'maxfiles' => 50}, ${8: 'accepted_types' => array('document')}))"
     }, {
         "trigger": "addElementtags\tMoodle",
         "contents": "addElement(${1:'tags'}, ${2: 'field_name'}, ${3: \\$lable}, ${4: \\$options}, ${5: \\$attributes})"
@@ -435,7 +435,7 @@
         "contents": "addElement(${1:'grading'}, ${2: 'advancedgrading'}, ${3: get_string('grade').':'}, ${4: array('gradinginstance' => \\$gradinginstance)})"
     }, {
         "trigger": "addElementquestioncategory\tMoodle",
-        "contents": "addElement(${1:'questioncategory'}, ${2: 'category'}, ${3: get_string('category'}, ${4: 'question')}, ${5: array('contexts'=>\\$contexts}, ${6: 'top'=>true}, ${7: 'currentcat'=>\\$currentcat}, ${8: 'nochildrenof'=>\\$currentcat)})"
+        "contents": "addElement(${1:'questioncategory'}, ${2: 'category'}, ${3: get_string('category', 'question')}, array(${4:'contexts'=>\\$contexts}, ${5: 'top'=>true}, ${6: 'currentcat'=>\\$currentcat}, ${7: 'nochildrenof'=>\\$currentcat}))"
     }, {
         "trigger": "disabledIf\tMoodle",
         "contents": "disabledIf(${1:'mycontrol'}, ${2: 'someselect'}, ${3: 'neq'}, ${4: 42})"
@@ -444,7 +444,7 @@
         "contents": "addRule(${1:'elementname'}, ${2: get_string('error')}, ${3: 'rule type'}, ${4: 'extraruledata'}, ${5: 'server'(default)}, ${6: false}, ${7: false})"
     }, {
         "trigger": "setHelpButton\tMoodle",
-        "contents": "setHelpButton(${1:'lessondefault'}, ${2: array('lessondefault'}, ${3: get_string('lessondefault'}, ${4: 'lesson')}, ${5: 'lesson')})"
+        "contents": "setHelpButton(${1:'lessondefault'}, array(${2:'lessondefault'}, ${3: get_string('lessondefault', 'lesson')}, ${4: 'lesson')})"
     }, {
         "trigger": "addHelpButton\tMoodle",
         "contents": "addHelpButton(${1:'api_key_field'}, ${2: 'api_key'}, ${3: 'block_extsearch'})"
@@ -486,7 +486,7 @@
         "contents": "\\$PAGE->navigation->find(${1:\\$courseid}, ${2: navigation_node::TYPE_COURSE})"
     }, {
         "trigger": "set_url\tMoodle",
-        "contents": "\\$PAGE->set_url(${1:new moodle_url('\/page\/to\/your\/file.php'}, ${2: array('key' => 'value'}, ${3: 'id' => 3))})"
+        "contents": "\\$PAGE->set_url(new moodle_url(${1:'\/page\/to\/your\/file.php'}, array(${2:'key' => 'value'}, ${3: 'id' => 3})))"
     }, {
         "trigger": "pagecontext\tMoodle",
         "contents": "\\$PAGE->context"
@@ -681,7 +681,7 @@
         "contents": "\\$OUTPUT->container_end()"
     }, {
         "trigger": "continue_button\tMoodle",
-        "contents": "\\$OUTPUT->continue_button(${1:new moodle_url('http:\/\/domain.com\/index.php'}, ${2: array('id' => 2}, ${3: 'userid' => 4))})"
+        "contents": "\\$OUTPUT->continue_button(new moodle_url(${1:'http:\/\/domain.com\/index.php'}, array(${2:'id' => 2}, ${3: 'userid' => 4})))"
     }, {
         "trigger": "error_text\tMoodle",
         "contents": "\\$OUTPUT->error_text(${1:'Its all broken!'})"
@@ -717,7 +717,7 @@
         "contents": "print_string(${1:'module_pluginlangfilename'}, ${2: 'plugintitle'})"
     }, {
         "trigger": "get_strings\tMoodle",
-        "contents": "get_strings(${1:array('enable'}, ${2: 'disable'}, ${3: 'up'}, ${4: 'down'}, ${5: 'none')}, ${6: 'qtype_dragdrop'})"
+        "contents": "get_strings(array(${1:'enable'}, ${2: 'disable'}, ${3: 'up'}, ${4: 'down'}, ${5: 'none')}, ${6: 'qtype_dragdrop'})"
     }, {
         "trigger": "asort\tMoodle",
         "contents": "asort()"
@@ -774,7 +774,7 @@
         "contents": "\\$plugin->dependencies"
     }, {
         "trigger": "add\tMoodle",
-        "contents": "add(${1:new admin_setting_FIELDTYPE('MYMOD\/MYNAME'}, ${2: 'MYNAME'}, ${3: 'MYDESC'}, ${4: array('value' => '0'}, ${5: 'fix' => false)}, ${6: PARAM_INT)})"
+        "contents": "add(new admin_setting_FIELDTYPE(${1:'MYMOD\/MYNAME'}, ${2: 'MYNAME'}, ${3: 'MYDESC'}, array(${4:'value' => '0'}, ${5: 'fix' => false)}, ${6: PARAM_INT}))"
     }, {
         "trigger": "get_fast_modinfo\tMoodle",
         "contents": "get_fast_modinfo(${1:\\$course})"
@@ -831,7 +831,7 @@
         "contents": "calendar_get_mini(${1:\\$courses}, ${2: \\$groups}, ${3: \\$users}, ${4: \\$cal_month = false}, ${5: \\$cal_year = false})"
     }, {
         "trigger": "calendar_get_popup\tMoodle",
-        "contents": "calendar_get_popup(${1:\\$is_today}, ${2: \\$event_timestart}, ${3: \\$popupcontent = ''}) "
+        "contents": "calendar_get_popup(${1:\\$is_today}, ${2: \\$event_timestart}, ${3: \\$popupcontent = ''})"
     }, {
         "trigger": "calendar_add_month\tMoodle",
         "contents": "calendar_add_month(${1:\\$month}, ${2: \\$year})"
@@ -840,7 +840,7 @@
         "contents": "calendar_sub_month(${1:\\$month}, ${2: \\$year})"
     }, {
         "trigger": "calendar_get_module_cached\tMoodle",
-        "contents": "calendar_get_module_cached(${1:&\\$coursecache}, ${2: \\$modulename}, ${3: \\$instance}) "
+        "contents": "calendar_get_module_cached(${1:&\\$coursecache}, ${2: \\$modulename}, ${3: \\$instance})"
     }, {
         "trigger": "calendar_get_course_cached\tMoodle",
         "contents": "calendar_get_course_cached(${1:&\\$coursecache}, ${2: \\$courseid})"
@@ -870,7 +870,7 @@
         "contents": "calendar_get_allowed_types(${1:&\\$allowed}, ${2: \\$course = null})"
     }, {
         "trigger": "calendar_add_event_allowed\tMoodle",
-        "contents": "calendar_add_event_allowed(${1:\\$event}) "
+        "contents": "calendar_add_event_allowed(${1:\\$event})"
     }, {
         "trigger": "calendar_edit_event_allowed\tMoodle",
         "contents": "calendar_edit_event_allowed(${1:\\$event})"
@@ -888,7 +888,7 @@
         "contents": "calendar_get_events(${1:\\$tstart}, ${2: \\$tend}, ${3: \\$users}, ${4: \\$groups}, ${5: \\$courses}, ${6: \\$withduration = true}, ${7: \\$ignorehidden = true})"
     }, {
         "trigger": "calendar_events_by_day\tMoodle",
-        "contents": "calendar_events_by_day(${1:\\$events}, ${2: \\$month}, ${3: \\$year}, ${4: &\\$eventsbyday}, ${5: &\\$durationbyday}, ${6: &\\$typesbyday}, ${7: &\\$courses}) "
+        "contents": "calendar_events_by_day(${1:\\$events}, ${2: \\$month}, ${3: \\$year}, ${4: &\\$eventsbyday}, ${5: &\\$durationbyday}, ${6: &\\$typesbyday}, ${7: &\\$courses})"
     }, {
         "trigger": "calendar_get_upcoming\tMoodle",
         "contents": "calendar_get_upcoming(${1:\\$courses}, ${2: \\$groups}, ${3: \\$users}, ${4: \\$daysinfuture}, ${5: \\$maxevents}, ${6: \\$fromtime = 0})"
@@ -972,7 +972,7 @@
         "contents": "events_trigger(${1:'user_enrolled'}, ${2: \\$ue})"
     }, {
         "trigger": "handlers\tMoodle",
-        "contents": "\\$handlers = array (${1: 'user_enrolled' => array ('handlerfile' => '\/mod\/MYMOD\/lib.php'}, ${2: 'handlerfunction' => 'MYMODFUNCTION'}, ${3: 'schedule' => 'instant'}, ${4: 'internal' => 1}, ${5:)})"
+        "contents": "\\$handlers = array(${1: 'user_enrolled'} => array ('handlerfile' => ${2:'\/mod\/MYMOD\/lib.php'}, 'handlerfunction' => ${3:'MYMODFUNCTION'}, 'schedule' => ${4:'instant'}, 'internal' => ${5: 1}))"
     }, {
         "trigger": "messageproviders\tMoodle",
         "contents": "\\$messageproviders = array (${1:'MYPROVIDER' => array ()})"
@@ -1026,7 +1026,7 @@
         "contents": "usergetdate(${1:time()})"
     }, {
         "trigger": "userdate\tMoodle",
-        "contents": "userdate(${1:make_timestamp(\\$y}, ${2: \\$m)}, ${3: 'Current user time'})"
+        "contents": "userdate(${1:make_timestamp(\\$y, \\$m)}, ${2: 'Current user time'})"
     }, {
         "trigger": "make_timestamp\tMoodle",
         "contents": "make_timestamp()"
